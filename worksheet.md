@@ -19,7 +19,7 @@ sudo apt-get install python-setuptools && easy_install pip
 Now we can use pip to install Flask (on the terminal, again):
 
 ```bash
-sudo apt-get install python-flask
+sudo pip install flask
 ```
 
 Flask will now be installed and will be ready to use.
