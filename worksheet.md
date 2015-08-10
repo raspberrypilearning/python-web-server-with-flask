@@ -1,214 +1,203 @@
 # Build a Web Server with Python Flask
 
-Setting up the Raspberry Pi and installing the required libraries
+Installing the lightweight Python web framework Flask and setting up a basic web server.
 
-When starting up the Raspberry Pi, note the IP address of the device. This will appear just before the login screen. Alternatively, if your Pi is set to boot straight into the GUI: open a terminal window and type:
+## Installing pip and Flask
 
-```bash
-ifconfig
-```
+First you're going to find your Raspberry Pi's IP address and install the Flask package.
 
-This task can be performed in the terminal or with the GUI, nearly all the work will be done on the terminal command line. This scheme assumes you are using the GUI and a terminal window.
+1. Start by opening a Terminal window from the taskbar or applications menu:
 
-To install the Python Flask library you'll have to install `pip`. This can be done on the terminal with the code:
+    ![](images/open-terminal.png)
 
-```bash
-sudo apt-get install python-setuptools && easy_install pip
-```
+1. Enter the following command in the Terminal to find your Raspberry Pi's IP address:
 
-Now we can use pip to install Flask (on the terminal, again):
+    ```bash
+    hostname -I
+    ```
 
-```bash
-sudo pip install flask
-```
+    *This is your Raspberry Pi's IP address on the local network. If you don't see anything then make sure you're connected to the Internet.*
 
-Flask will now be installed and will be ready to use.
+1. Next, you'll need to install `pip` with the following command:
+
+    ```bash
+    sudo apt-get install python-pip
+    ```
+
+    *`pip` is a tool for installing Python packages from the Python Packaging Index (PyPi) - you can browse packages at [pypi.python.org](https://pypi.python.org/).*
+
+1. Now use `pip` to install Flask:
+
+    ```bash
+    sudo pip install flask
+    ```
 
 ## Building a basic Flask web application
 
-This task will show you how to set up the most basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser. You must have followed the setup steps shown above.
+Now you're going to set up the most basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
 
-Open a terminal window and create a new folder in your document called `webapp`:
+1. Return to the Terminal window and create a new folder in your document called `webapp`:
 
-```bash
-mkdir webapp
-```
+    ```bash
+    mkdir webapp
+    ```
 
-Navigate into this directory using the cd command:
+    *`mkdir` means "make directory" - a directory is a folder, it can contain files and more folders.*
 
-```bash
-cd webapp
-```
+1. Navigate into this directory using the `cd` command:
 
-Flask applications can be run from a single file. Let's create the file now using touch:
+    ```bash
+    cd webapp
+    ```
 
-```bash
-touch app.py
-```
+    *`cd` means "change directory" - you use it to enter a folder*
 
-This will create a file named app.py, in which all our application code will be written.
+1. Flask applications can be run from a single file. Now create the file now using touch:
 
-You can now open this file in a text editor of your choice, or use the terminal editor nano, in order to write the first lines of code needed to set up Flask. We'll use nano to load the file:
+    ```bash
+    touch app.py
+    ```
 
-```bash
-sudo nano app.py
-```
+    *This will create a file named `app.py`, in which all our application code will be written.*
 
-(note you'll need to use `sudo` with `nano` to ensure you have write permissions.)
+1. Enter the following command to open this file in IDLE, the Python editor, in order to get started writing your web app:
 
-Now let's write the basic Flask application code. We'll explain this line-by-line afterwards:
+    ```bash
+    idle app.py &
+    ```
 
-```python
-from flask import Flask
+    *The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.*
 
-app = Flask(__name__)
+1. Two windows will have opened. One is the Python shell, and the other is an empty window with `app.py` in the title bar. Click on the `app.py` window to focus on it. You'll write your application code here and any printed messages or errors will be shown in the Python shell.
+
+1. Now enter the following lines into the blank `app.py` window:
+
+    ```python
+    from flask import Flask
+
+    app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return 'Hello Raspberry Pi!'
+    @app.route('/')
+    def index():
+        return 'Hello world'
 
-if __name__ == '__main__':
-    app.run(debug=True)
-```
+    if __name__ == '__main__':
+        app.run(debug=True)
+    ```
 
-In nano; we can save the file using `Ctrl + X` then by typing `y` and pressing `Enter`, otherwise save it through the standard way of your text editor.
+1. Save the file with `Ctrl + S` and run with `F5`. Your web server is now running!
 
-The last step to run this now is to use Python in the terminal to run the file:
+    If everything has been written correctly, you should see an output similar to this:
 
-```bash
-python app.py
-```
+    ```
+    - Running on `http://127.0.0.1:5000/`
+    - Restarting with reloader
+    ```
 
-If everything has been written correctly, you should see an output similar to this:
+1. Open the Pi's web browser from the taskbar or application menu and enter `http://127.0.0.1:5000/` - you should see a white screen with the words `Hello world`:
 
- - Running on `http://127.0.0.1:5000/`
- - Restarting with reloader
+    ![](images/flask-hello-world.png)
 
-Finally: go to a web browser and navigate to the url address shown above (`http://127.0.0.1:5000/`) on the Raspberry Pi to see the content `Hello Raspberry Pi!` displayed.
-If you are using SSH, or want to view this on a separate computer on the same network: type in the ip address followed by `:5000` to view the web page (for example: IP address `192.168.1.1:5000`).
-
-Explaining the basic Flask code
-
-Now that we've set up a simple web server, let's figure out exactly what the code is doing. We'll do this by going line-by-line through the code we just wrote:
-
-```python
-from flask import Flask
-```
-
-This line of code is importing the Flask library into our Python application. If you're familiar with Python this is a common practice of adding third party libraries to your software.
-
-```python
-app = Flask(__name__)
-```
-
-This line is a little complex, but we're basically creating an object called app, which is an instance of a Flask application, and we're passing in a variable called `__name__`.
-
-Where does `__name__` come from? It is a global constant variable used by Python to define who is currently running this file. We'll use this again further down in the code, which will help explain it a bit better. For now: remember that Python defines it.
-
-```python
-@app.route('/')
-def index():
-    return 'Hello Raspberry Pi!'
-```
-
-This is the most interesting part of the code for us: this is how we create new URLs in our web application. The first line `@app.route('/')` tells us:
-
-when we visit this route on our web server: run this function below.
-
-It is a decorator, a fairly complex concept in Python: a function that returns a function. We don't need to learn exactly how it works today, just that we need one for each new route that we want to create.
-
-```
-if __name__ == '__main__':
-	app.run(debug=True)
-```
-
-These final lines tell Python to run the application if `__name__` is `__main__`, in other words: if you're running the file in the command line.
+    ```python
+    @app.route('/')
+    def index():
+        return 'Hello world'
+    ```
 
 ## Adding a new route to your web app
 
-Let's add a new route to our web app.
+Now you're going to add a new route to your web app, which will create another web page.
 
-Underneath the first route, which is this code:
+1. In a web application, a route is a certain path into your website - determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
 
-```python
-@app.route('/')
-def index():
-    return 'Hello Raspberry Pi!'
-```
+    In the "Hello Raspberry Pi" example we used a single route:
 
-We can create a new route:
+    ```python
+    @app.route('/')
+    def index():
+        return 'Hello world'
+    ```
 
-```python
-@app.route('/cakes')
-def cakes():
-    return 'Yummy cakes!'
-```
+    This route is page up of three parts:
 
-Now navigate to you server (127.0.0.1:5000) and add /cakes to the end, like this:
+        1. `@app.route('/')` - this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
+        1. `def index()` - this is the name we give to the route - here it was called `index` because it's the index of the website.
+        1. `return 'Hello world'` - this is the content of the web page which is returned when the user browses the index of the website.
 
-```
-127.0.0.1:5000/cakes
-```
+1. Create a new route by adding the following lines below the first route:
 
-to see the new route.
+    ```python
+    @app.route('/cakes')
+    def cakes():
+        return 'Yummy cakes!'
+    ```
 
-### Extra student tasks:
+1. Now navigate to your website's cake page in the browser at `127.0.0.1:5000/cakes`. You should see a webpage with the text `Yummy cakes!` on it:
 
-Test what the students have learned by getting them to add their own route to the application and demonstrating it to you.
+    ![](images/flask-cakes.png)
 
-Add html templates to your web app
+### Add HTML templates to your web app
 
-Returning plain text is pretty boring, there are plenty of complicated and impressive websites on the web that use html. This next task will show you how to use a html template in your web application.
+Next you'll modify your existing routes to return full HTML templates rather than simple text strings.
 
-The first step is to import the template renderer. Modify the first line of code to look like this (new code is highlighted in blue):
+1. First create a `templates` folder in your `webapp` folder by entering this into the Terminal:
 
-```python
-from flask import Flask, render_template
-```
+    ```bash
+    mkdir templates
+    ```
 
-The `render_template` object is used by Flask to help render html templates.
+1. Then use `touch` to create a new template file:
 
-Next we'll need to modify our basic view to return a html template instead of the normal text, change the `index()` function to this (new code in blue):
+    ```bash
+    touch index.html
+    ```
 
-```python
-@app.route('/')
-def index():
-    return render_template('index.html')
-```
+1. Return to the IDLE window and click `File > Open` and navigate to your `index.html` file. Open it and add some HTML:
 
-But wait! This won't work because the template doesn't exist yet. We'll have to make one:
+    ```html
+    <html>
+        <body>
+            <h1>Hello from a template!</h1>
+        </body>
+    </html>
+    ```
 
-Flask will look in a directory called templates in the same directory as the `app.py` file to find these, so create a directory called templates in the webapp directory. This can be done with the terminal using the command:
+1. Return to your `app.py` file in IDLE and modify the first line of your code to import the `render_template` function as well:
 
-```bash
-mkdir templates
-```
+    ```python
+    from flask import Flask, render_template
+    ```
 
-Then we can use touch to create a new template:
+1. Finally you'll need to modify your index view to return the HTML template instead of the normal text. Change the `index()` function to this:
 
-```bash
-touch index.html
-```
+    ```python
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+    ```
 
-Open the file with nano (or your text editor of choice) and add some html:
+    *Flask will look for `index.html` in a directory called `templates` in the same directory as the `app.py` file.*
 
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-    Hello from a template!
-  </body>
-</html>
-```
+1. Save all file and reload the route in your web browser (go to the base route at `http://127.0.0.1:5000/`) to see your new HTML template being displayed.
 
-Save this file and reload the route in your web browser (`127.0.0.1:5000/`) to see your new html template being displayed.
+    ![](images/flask-header.png)
 
-### Extra student tasks:
+    *In this case it's not much different as all you've done is added a header - but there's plenty of scope to expand!*
 
-Modify the html template to include images, styling and some content.
-Add a new template to an existing or new view.
-Create `<a>` tags in html to link between the two views.
+## Adding colour to the web page with CSS
+
+Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the browser. Now you'll add some CSS to add colour to your web page.
+
+1. First,
+
+
+
+
+
+
+
+
 
 ## Adding dynamic content to a view
 
