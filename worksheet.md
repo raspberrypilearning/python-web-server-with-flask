@@ -1,22 +1,14 @@
 # Build a Web Server with Python Flask
 
-Installing the lightweight Python web framework Flask and setting up a basic web server.
+Installing the lightweight web framework Flask and setting up a basic web server with different pages using HTML, CSS and Python.
 
 ## Installing pip and Flask
 
-First you're going to find your Raspberry Pi's IP address and install the Flask package.
+First you're going to find your Raspberry Pi's IP address and install the Flask package. Make sure you're online before you start.
 
 1. Start by opening a Terminal window from the taskbar or applications menu:
 
     ![Open Terminal window](images/open-terminal.png)
-
-1. Enter the following command in the Terminal to find your Raspberry Pi's IP address:
-
-    ```bash
-    hostname -I
-    ```
-
-    *This is your Raspberry Pi's IP address on the local network. If you don't see anything then make sure you're connected to the Internet.*
 
 1. Next, you'll need to install `pip` with the following command:
 
@@ -84,6 +76,8 @@ Now you're going to set up the most basic web application with Flask and Python.
     if __name__ == '__main__':
         app.run(debug=True, host='0.0.0.0')
     ```
+
+    *Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network*
 
 1. Save the file with `Ctrl + S`. Now return to the Terminal window and enter `python app.py` to run the web server.
 
@@ -288,8 +282,29 @@ It tells the template to render the variable `name` which was passed in the rout
 
 What happens when you just visit `127.0.0.1:5000/hello/` without a name? Think about how you can prevent this giving an error.
 
+## Browsing on other devices
+
+Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessible to any device on the same network - other computers, tablets and smartphones.
+
+1. Enter the following command in the Terminal window to find your Raspberry Pi's IP address:
+
+    ```bash
+    hostname -I
+    ```
+
+    *You should get something like `192.168.1.3`*
+
+1. Using another computer, tablet or smartphone, make sure it's connected to the same network as the Raspberry Pi.
+
+1. Open up a web browser on the other device, and enter the Raspberry Pi's IP address into the address bar, with `:5000` on the end, e.g. `http://192.168.1.3:5000/`:
+
+    ![Address bar](images/address-bar.png)
+
+1. You should now see the web app from the other device. Try navigating to the other pages too.
+
 ## What next?
 
+- Try adding links between pages using anchor tags like `<a href="/hello/Paul/">Hello Paul</a>`
 - Add parameters to a previous route to make other views dynamic
 - Add more CSS rules to each of your routes
 - Learn more about HTML, CSS and web development with [Google Coder](https://www.raspberrypi.org/learning/coder-html-css-lessons/), [Mozilla Develop Network](https://developer.mozilla.org/en-US/Learn) and [Codecademy](https://www.codecademy.com/en/tracks/web)
