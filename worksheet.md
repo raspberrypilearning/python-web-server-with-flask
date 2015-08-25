@@ -4,7 +4,7 @@ Installing the lightweight web framework Flask and setting up a basic web server
 
 ## Installing pip and Flask
 
-First you're going to find your Raspberry Pi's IP address and install the Flask package. Make sure you're online before you start.
+First you're going to install the Flask package. Make sure you're online before you start.
 
 1. Start by opening a Terminal window from the taskbar or applications menu:
 
