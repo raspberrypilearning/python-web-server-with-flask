@@ -16,7 +16,7 @@ First you're going to install the Flask package. Make sure you're online before 
     sudo apt-get install python-pip
     ```
 
-    *`pip` is a tool for installing Python packages from the Python Packaging Index (PyPi) - you can browse packages at [pypi.python.org](https://pypi.python.org/).*
+`pip` is a tool for installing Python packages from the Python Packaging Index (PyPi): you can browse packages at [pypi.python.org](https://pypi.python.org/).
 
 1. Now use `pip` to install Flask:
 
