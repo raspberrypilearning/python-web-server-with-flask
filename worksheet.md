@@ -32,7 +32,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     ```bash
     mkdir webapp
     ```
-    `mkdir` means "make directory": a directory is a folder, it can contain files and more folders.
+    `mkdir` means "make directory": a directory is a folder. It can contain files and more folders.
 
 1. Navigate into this directory using the `cd` command:
 
@@ -71,8 +71,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     if __name__ == '__main__':
         app.run(debug=True, host='0.0.0.0')
     ```
-
-    *Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network*
+    Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network*
 
 1. Save the file with `Ctrl + S`. Now return to the Terminal window and enter `python app.py` to run the web server.
 
@@ -138,8 +137,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 1. Open `Text Editor` under `Accessories` in the main menu:
 
     ![Text Editor](images/open-text-editor.png)
-
-    *This will open up a basic text editor called Leafpad*
+    This will open up a basic text editor called Leafpad
 
 1. Enter the following HTML code:
 
