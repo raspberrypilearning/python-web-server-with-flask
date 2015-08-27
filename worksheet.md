@@ -15,8 +15,7 @@ First you're going to install the Flask package. Make sure you're online before 
     ```bash
     sudo apt-get install python-pip
     ```
-
-    *`pip` is a tool for installing Python packages from the Python Packaging Index (PyPi): you can browse packages at [pypi.python.org](https://pypi.python.org/).*
+    `pip` is a tool for installing Python packages from the Python Packaging Index (PyPi): you can browse packages at [pypi.python.org](https://pypi.python.org/).
 
 1. Now use `pip` to install Flask:
 
@@ -33,23 +32,20 @@ Now you're going to set up the most basic web application with Flask and Python.
     ```bash
     mkdir webapp
     ```
-
-    *`mkdir` means "make directory": a directory is a folder, it can contain files and more folders.*
+    `mkdir` means "make directory": a directory is a folder, it can contain files and more folders.
 
 1. Navigate into this directory using the `cd` command:
 
     ```bash
     cd webapp
     ```
-
-    *`cd` means "change directory": you use it to enter a folder*
+    `cd` means "change directory": you use it to enter a folder
 
 1. Flask applications can be run from a single file. Now create the file now using touch:
 
     ```bash
     touch app.py
     ```
-
     This will create a file named `app.py`, in which all our application code will be written.
 
 1. Enter the following command to open this file in IDLE, the Python editor, in order to get started writing your web app:
@@ -57,8 +53,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     ```bash
     idle app.py &
     ```
-
-    *The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.*
+    The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.*
 
 1. Two windows will have opened. One is the Python shell, and the other is an empty window with `app.py` in the title bar. Click on the `app.py` window to focus on it. You'll write your application code here and any printed messages or errors will be shown in the Python shell.
 
