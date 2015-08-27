@@ -34,7 +34,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     mkdir webapp
     ```
 
-    *`mkdir` means "make directory" - a directory is a folder, it can contain files and more folders.*
+    *`mkdir` means "make directory": a directory is a folder, it can contain files and more folders.*
 
 1. Navigate into this directory using the `cd` command:
 
@@ -42,7 +42,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     cd webapp
     ```
 
-    *`cd` means "change directory" - you use it to enter a folder*
+    *`cd` means "change directory": you use it to enter a folder*
 
 1. Flask applications can be run from a single file. Now create the file now using touch:
 
@@ -102,7 +102,7 @@ Now you're going to set up the most basic web application with Flask and Python.
 
 Now you're going to add a new route to your web app, which will create another web page.
 
-1. In a web application, a route is a certain path into your website - determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
+1. In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
 
     In the "Hello Raspberry Pi" example we used a single route:
 
@@ -180,7 +180,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 
     ![](images/flask-header.png)
 
-    *In this case it's not much different as all you've done is added a header - but there's plenty of scope to expand!*
+    *In this case it's not much different as all you've done is added a header, but there's plenty of scope to expand!*
 
 ## Adding colour to the web page with CSS
 
@@ -205,7 +205,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
     }
     ```
 
-    *Note here we've used colour names - usually colours are defined by hex codes like `#ff0000` (red) but this is a simple example*
+    *Note here we've used colour names: usually colours are defined by hex codes like `#ff0000` (red) but this is a simple example*
 
 1. Save the file.
 
