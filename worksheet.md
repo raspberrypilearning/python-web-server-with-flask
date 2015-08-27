@@ -50,7 +50,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     touch app.py
     ```
 
-    *This will create a file named `app.py`, in which all our application code will be written.*
+    This will create a file named `app.py`, in which all our application code will be written.
 
 1. Enter the following command to open this file in IDLE, the Python editor, in order to get started writing your web app:
 
