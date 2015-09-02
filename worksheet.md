@@ -230,7 +230,7 @@ If your web app doesn't look right, check you saved your CSS file in the right p
 
 ## Adding dynamic content to a view
 
-So far you've learned to deliver HTML template through a web server running on your Raspberry Pi. Wouldn't it be cool if you could add some dynamic content to the pages so it displayed different information? It would indeed! Large websites like Facebook, Youtube and BBC news show different content depending on the route you visit, even though the templates are very similar.
+So far you've learned to deliver HTML template through a web server running on your Raspberry Pi. Wouldn't it be good if you could add some dynamic content to the pages to display different information? Large websites like Facebook, YouTube and BBC News show different content depending on the route you visit, even though the templates are very similar.
 
 Now you'll create a new route on your website so that when you go to `http://127.0.0.1/hello/name` it will say "Hello name!" and replace name with whatever you put there. So `/hello/Paul/` will display "Hello Paul!"
 
@@ -251,9 +251,9 @@ Now you'll create a new route on your website so that when you go to `http://127
     ```html
     <h1>Hello {{ name }}!</h1>
     ```
-    Note here we've neglected the `<html>` and `<body>` tags - this is OK for testing but real websites should have a full HTML structure.
+    Note here we've neglected the `<html>` and `<body>` tags. This is OK for testing but real websites should have a full HTML structure.
 
-1. Save the file, reload the web server and visit `http://127.0.0.1:5000/hello/paul` - it should look like this:
+1. Save the file, reload the web server and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
 
     ![Hello Paul!](images/flask-hello-paul.png)
     
@@ -273,7 +273,7 @@ What happens when you just visit `127.0.0.1:5000/hello/` without a name? Think a
 
 ## Browsing on other devices
 
-Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessible to any device on the same network - other computers, tablets and smartphones.
+Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessible to any device on the same network, including other computers, tablets, and smartphones.
 
 1. Enter the following command in the Terminal window to find your Raspberry Pi's IP address:
 
@@ -282,7 +282,7 @@ Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessi
     ```
     You should get something like `192.168.1.3`
 
-1. Using another computer, tablet or smartphone, make sure it's connected to the same network as the Raspberry Pi.
+1. Take another computer, tablet, or smartphone, and make sure it's connected to the same network as the Raspberry Pi.
 
 1. Open up a web browser on the other device, and enter the Raspberry Pi's IP address into the address bar, with `:5000` on the end, e.g. `http://192.168.1.3:5000/`:
 
