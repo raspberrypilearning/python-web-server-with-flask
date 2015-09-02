@@ -7,7 +7,7 @@ This scheme works best if you, the teacher, runs through the tasks yourself befo
 ## What you will learn
 
 - How to set up a Flask web application
-- Understanding how Flask runs
+- Understand how Flask runs
 - How to add new views
 - How to add templates a view
 - Adding dynamic content to a view
