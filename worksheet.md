@@ -1,6 +1,6 @@
 # Build a Web Server with Python Flask
 
-Installing the lightweight web framework Flask and setting up a basic web server with different pages using HTML, CSS and Python.
+Install the lightweight web framework Flask and set up a basic web server with different pages using HTML, CSS, and Python.
 
 ## Installing pip and Flask
 
@@ -15,8 +15,7 @@ First you're going to install the Flask package. Make sure you're online before 
     ```bash
     sudo apt-get install python-pip
     ```
-
-    *`pip` is a tool for installing Python packages from the Python Packaging Index (PyPi) - you can browse packages at [pypi.python.org](https://pypi.python.org/).*
+    `pip` is a tool for installing Python packages from the Python Packaging Index (PyPi): you can browse packages at [pypi.python.org](https://pypi.python.org/).
 
 1. Now use `pip` to install Flask:
 
@@ -33,32 +32,28 @@ Now you're going to set up the most basic web application with Flask and Python.
     ```bash
     mkdir webapp
     ```
-
-    *`mkdir` means "make directory" - a directory is a folder, it can contain files and more folders.*
+    `mkdir` means "make directory": a directory is a folder. It can contain files and more folders.
 
 1. Navigate into this directory using the `cd` command:
 
     ```bash
     cd webapp
     ```
-
-    *`cd` means "change directory" - you use it to enter a folder*
+    `cd` means "change directory": you use it to enter a folder.
 
 1. Flask applications can be run from a single file. Now create the file now using touch:
 
     ```bash
     touch app.py
     ```
-
-    *This will create a file named `app.py`, in which all our application code will be written.*
+    This will create a file named `app.py`, in which all our application code will be written.
 
 1. Enter the following command to open this file in IDLE, the Python editor, in order to get started writing your web app:
 
     ```bash
     idle app.py &
     ```
-
-    *The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.*
+    The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.
 
 1. Two windows will have opened. One is the Python shell, and the other is an empty window with `app.py` in the title bar. Click on the `app.py` window to focus on it. You'll write your application code here and any printed messages or errors will be shown in the Python shell.
 
@@ -76,8 +71,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     if __name__ == '__main__':
         app.run(debug=True, host='0.0.0.0')
     ```
-
-    *Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network*
+    Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
 
 1. Save the file with `Ctrl + S`. Now return to the Terminal window and enter `python app.py` to run the web server.
 
@@ -88,7 +82,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     - Restarting with reloader
     ```
 
-1. Open the Pi's web browser from the taskbar or application menu and enter `http://127.0.0.1:5000/` - you should see a white screen with the words `Hello world`:
+1. Open the Pi's web browser from the taskbar or application menu and enter `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
 
     ![Flask Hello world](images/flask-hello-world.png)
 
@@ -98,7 +92,7 @@ Now you're going to set up the most basic web application with Flask and Python.
 
 Now you're going to add a new route to your web app, which will create another web page.
 
-1. In a web application, a route is a certain path into your website - determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
+1. In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
 
     In the "Hello Raspberry Pi" example we used a single route:
 
@@ -110,9 +104,9 @@ Now you're going to add a new route to your web app, which will create another w
 
     This route is page up of three parts:
 
-    1. `@app.route('/')` - this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
-    1. `def index()` - this is the name we give to the route - here it was called `index` because it's the index of the website.
-    1. `return 'Hello world'` - this is the content of the web page which is returned when the user browses the index of the website.
+    - `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
+    - `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
+    - `return 'Hello world'`: this is the content of the web page which is returned when the user browses the index of the website.
 
 1. Create a new route by adding the following lines below the first route:
 
@@ -139,8 +133,8 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 1. Open `Text Editor` under `Accessories` in the main menu:
 
     ![Text Editor](images/open-text-editor.png)
-
-    *This will open up a basic text editor called Leafpad*
+    
+    This will open up a basic text editor called Leafpad
 
 1. Enter the following HTML code:
 
@@ -167,8 +161,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
     def index():
         return render_template('index.html')
     ```
-
-    *Flask will look for `index.html` in a directory called `templates` in the same directory as the `app.py` file.*
+    Flask will look for `index.html` in a directory called `templates` in the same directory as the `app.py` file.
 
 1. Save the file. Make sure your web app is still running. If you stopped it, just run `python app.py` from your `webapp` directory.
 
@@ -182,9 +175,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 
 Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the browser. Now you'll add some CSS to add colour to your web page.
 
-1. First, return to the Terminal window and navigate to the `webapp` directory.
-
-    *If you're still in the `templates` directory, go back up one with `cd ..`*
+1. First, return to the Terminal window and navigate to the `webapp` directory. If you're still in the `templates` directory, go back up one with `cd ..`.
 
 1. Create a new directory called `static`
 
@@ -200,8 +191,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
         color: yellow;
     }
     ```
-
-    *Note here we've used colour names - usually colours are defined by hex codes like `#ff0000` (red) but this is a simple example*
+    Note here we've used colour names: usually colours are defined by hex codes like `#ff0000` (red) but this is a simple example.
 
 1. Save the file.
 
@@ -210,7 +200,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
     ```html
     <html>
     <head>
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href='/static/style.css' />
     </head>
     <body>
     <h1>Hello from a template!</h1>
@@ -236,7 +226,7 @@ If your web app doesn't look right, check you saved your CSS file in the right p
 
 ## Adding dynamic content to a view
 
-So far you've learned to deliver HTML template through a web server running on your Raspberry Pi. Wouldn't it be cool if you could add some dynamic content to the pages so it displayed different information? It would indeed! Large websites like Facebook, Youtube and BBC news show different content depending on the route you visit, even though the templates are very similar.
+So far you've learned to deliver HTML template through a web server running on your Raspberry Pi. Wouldn't it be good if you could add some dynamic content to the pages to display different information? Large websites like Facebook, YouTube and BBC News show different content depending on the route you visit, even though the templates are very similar.
 
 Now you'll create a new route on your website so that when you go to `http://127.0.0.1/hello/name` it will say "Hello name!" and replace name with whatever you put there. So `/hello/Paul/` will display "Hello Paul!"
 
@@ -257,18 +247,17 @@ Now you'll create a new route on your website so that when you go to `http://127
     ```html
     <h1>Hello {{ name }}!</h1>
     ```
+    Note here we've neglected the `<html>` and `<body>` tags. This is OK for testing but real websites should have a full HTML structure.
 
-    *Note here we've neglected the `<html>` and `<body>` tags - this is OK for testing but real websites should have a full HTML structure*
-
-1. Save the file, reload the web server and visit `http://127.0.0.1:5000/hello/paul` - it should look like this:
+1. Save the file, reload the web server and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
 
     ![Hello Paul!](images/flask-hello-paul.png)
-
+    
     Try it with different names!
 
 What's happening here?
 
-Flask uses `jinja`, a Python library for rendering templates. Using the curly braces on this line:
+Flask uses `jinja`, a Python library for rendering templates. Use the braces (curly brackets) on this line:
 
 ```html
 <h1>Hello {{ name }}!</h1>
@@ -280,17 +269,16 @@ What happens when you just visit `127.0.0.1:5000/hello/` without a name? Think a
 
 ## Browsing on other devices
 
-Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessible to any device on the same network - other computers, tablets and smartphones.
+Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessible to any device on the same network, including other computers, tablets, and smartphones.
 
 1. Enter the following command in the Terminal window to find your Raspberry Pi's IP address:
 
     ```bash
     hostname -I
     ```
+    You should get something like `192.168.1.3`
 
-    *You should get something like `192.168.1.3`*
-
-1. Using another computer, tablet or smartphone, make sure it's connected to the same network as the Raspberry Pi.
+1. Take another computer, tablet, or smartphone, and make sure it's connected to the same network as the Raspberry Pi.
 
 1. Open up a web browser on the other device, and enter the Raspberry Pi's IP address into the address bar, with `:5000` on the end, e.g. `http://192.168.1.3:5000/`:
 
@@ -300,10 +288,10 @@ Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessi
 
 ## What next?
 
-- Try adding links between pages using anchor tags like `<a href="/hello/Paul/">Hello Paul</a>`
+- Try adding links between pages using anchor tags like `<a href='/hello/Paul/'>Hello Paul</a>`
 - Add parameters to a previous route to make other views dynamic
 - Add more CSS rules to each of your routes
-- Learn more about HTML, CSS and web development with [Google Coder](https://www.raspberrypi.org/learning/coder-html-css-lessons/), [Mozilla Develop Network](https://developer.mozilla.org/en-US/Learn) and [Codecademy](https://www.codecademy.com/en/tracks/web)
+- Learn more about HTML, CSS, and web development with [Google Coder](https://www.raspberrypi.org/learning/coder-html-css-lessons/), [Mozilla Developer Network](https://developer.mozilla.org/en-US/Learn) and [Codecademy](https://www.codecademy.com/en/tracks/web)
 - Learn more about Flask using the [Flask documentation](http://flask.pocoo.org/docs)
 - Create a physical computing project with Raspberry Pi and use Flask to create a web interface to it (see [Matt Richardson's guide](http://mattrichardson.com/Raspberry-Pi-Flask/index.html), [BETT Bot](https://github.com/bennuttall/bett-bot) and [Energenie](http://www.pythonhosted.org/energenie/examples/web/))
-- Use a Flask web app as the control panel in a home automation project - turn the lights on from your phone!
+- Use a Flask web app as the control panel in a home automation project: turn the lights on from your phone!

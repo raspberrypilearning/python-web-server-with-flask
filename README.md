@@ -2,12 +2,12 @@
 
 This document provides a scheme of work that demonstrates how to build and run a simple web server on a Raspberry Pi. This allows students to produce and run their own websites straight from a single Raspberry Pi computer and build simple web applications that can be publicly accessible on the web. We'll use Python, the web framework Flask, and some basic HTML to serve some simple web pages.
 
-This scheme works best if you, the teacher, runs through the tasks yourself before presenting it to students. We've left the speed and additional learning objectives up to you, depending on the skill level of your students or the time frame in which you have to teach it.
+This scheme works best if the teacher runs through the tasks themself before presenting it to students. We've left the speed and additional learning objectives up to you, depending on the skill level of your students or the time frame in which you have to teach it.
 
 ## What you will learn
 
 - How to set up a Flask web application
-- Understanding how Flask runs
+- Understand how Flask runs
 - How to add new views
 - How to add templates a view
 - Adding dynamic content to a view
