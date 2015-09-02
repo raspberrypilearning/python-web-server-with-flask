@@ -204,7 +204,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
     ```html
     <html>
     <head>
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href='/static/style.css' />
     </head>
     <body>
     <h1>Hello from a template!</h1>
@@ -292,7 +292,7 @@ Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessi
 
 ## What next?
 
-- Try adding links between pages using anchor tags like `<a href="/hello/Paul/">Hello Paul</a>`
+- Try adding links between pages using anchor tags like `<a href='/hello/Paul/'>Hello Paul</a>`
 - Add parameters to a previous route to make other views dynamic
 - Add more CSS rules to each of your routes
 - Learn more about HTML, CSS and web development with [Google Coder](https://www.raspberrypi.org/learning/coder-html-css-lessons/), [Mozilla Developer Network](https://developer.mozilla.org/en-US/Learn) and [Codecademy](https://www.codecademy.com/en/tracks/web)
