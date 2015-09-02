@@ -1,6 +1,6 @@
-# Build a Web Server with Python Flask
+# Build a Python powered Web Server with Flask
 
-Install the lightweight web framework Flask and set up a basic web server with different pages using HTML, CSS, and Python.
+Install the lightweight web framework Flask and set up a basic web server with different pages using Python, HTML, and CSS.
 
 ## Installing pip and Flask
 
@@ -133,7 +133,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 1. Open `Text Editor` under `Accessories` in the main menu:
 
     ![Text Editor](images/open-text-editor.png)
-    
+
     This will open up a basic text editor called Leafpad
 
 1. Enter the following HTML code:
@@ -252,7 +252,7 @@ Now you'll create a new route on your website so that when you go to `http://127
 1. Save the file, reload the web server and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
 
     ![Hello Paul!](images/flask-hello-paul.png)
-    
+
     Try it with different names!
 
 What's happening here?
