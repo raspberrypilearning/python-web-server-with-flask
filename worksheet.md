@@ -84,7 +84,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     If everything has been written correctly, you should see an output similar to this:
 
     ```
-    - Running on http://127.0.0.1:5000/
+    - Running on http://0.0.0.1:5000/
     - Restarting with reloader
     ```
 
@@ -92,11 +92,7 @@ Now you're going to set up the most basic web application with Flask and Python.
 
     ![Flask Hello world](images/flask-hello-world.png)
 
-    ```python
-    @app.route('/')
-    def index():
-        return 'Hello world'
-    ```
+    *Note: `127.0.0.1` means 'home' - this computer, and `:5000` means 'port 5000', which is the port the web server is running on*
 
 ## Adding a new route to your web app
 
@@ -128,7 +124,7 @@ Now you're going to add a new route to your web app, which will create another w
 
 1. Now navigate to your website's cake page in the browser at `127.0.0.1:5000/cakes`. You should see a webpage with the text `Yummy cakes!` on it:
 
-    ![](images/flask-cakes.png)
+    ![Yummy Cakes](images/flask-cakes.png)
 
 ### Add HTML templates to your web app
 
@@ -178,7 +174,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 
 1. Reload the route in your web browser (go to the base route at `http://127.0.0.1:5000/`) to see your new HTML template being displayed.
 
-    ![](images/flask-header.png)
+    ![Hello from a template!](images/flask-template.png)
 
     *In this case it's not much different as all you've done is added a header - but there's plenty of scope to expand!*
 
@@ -298,7 +294,7 @@ Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessi
 
 1. Open up a web browser on the other device, and enter the Raspberry Pi's IP address into the address bar, with `:5000` on the end, e.g. `http://192.168.1.3:5000/`:
 
-    ![Address bar](images/address-bar.png)
+    ![Address bar](images/flask-on-android.png)
 
 1. You should now see the web app from the other device. Try navigating to the other pages too.
 
