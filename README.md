@@ -1,6 +1,8 @@
-# Build a Web Server with Python Flask
+# Build a Python Web Server with Flask
 
 Install the lightweight web framework Flask and set up a basic web server with different pages using Python, HTML, and CSS.
+
+![Python Web Server with Flask](cover.png)
 
 ## Requirements
 
