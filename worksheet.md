@@ -169,13 +169,13 @@ Next you'll modify your existing routes to return full HTML templates rather tha
 
     ![Hello from a template!](images/flask-template.png)
 
-    *In this case it's not much different as all you've done is added a header - but there's plenty of scope to expand!*
+    In this case it's not much different as all you've done is added a header, but there's plenty of scope to expand!
 
 ## Adding colour to the web page with CSS
 
 Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the browser. Now you'll add some CSS to add colour to your web page.
 
-1. First, return to the Terminal window and navigate to the `webapp` directory. If you're still in the `templates` directory, go back up one with `cd ..`.
+1. First, return to the Terminal window and navigate to the `webapp` directory. If you're in the `templates` directory, go back up one with `cd ..`.
 
 1. Create a new directory called `static`
 
