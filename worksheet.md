@@ -239,7 +239,7 @@ Now you'll create a new route on your website so that when you go to `http://127
     ```
 
     - `@app.route('/hello/<name>')` - the `<name>` part means it pass the name into the `hello` function as a variable called `name`
-    - `def name(my_name)` - this is the function that determines what content is shown - this time it takes a parameter - the given name
+    - `def hello(name)` - this is the function that determines what content is shown - this time it takes a parameter: the given name
     - `return render_template('page.html', name=name)` - here we look up the template `page.html` and pass in the variable `name` from the URL, so the template can use it
 
 1. Create a new HTML template called `page.html` using the Text Editor, and add the following HTML code to it:
