@@ -55,7 +55,7 @@ Now you're going to set up a basic web application with Flask and Python. You wi
     ```bash
     idle app.py &
     ```
-    The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.
+    The ampersand (&) on the end of this command tells it to open Python 2 (IDLE) in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the Python 2 (IDLE) window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting (IDLE).
 
 1. An empty window with `app.py` displayed in the title bar will appear. You'll write your application code here and when you run your code any printed messages or errors will be shown in a Python shell window.
 
