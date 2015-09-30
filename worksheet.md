@@ -4,24 +4,25 @@ Install the lightweight web framework Flask and set up a basic web server with d
 
 ## Installing pip and Flask
 
-First you're going to install the Flask package. Make sure you're online before you start.
+First you're going to install the Flask package. Make sure you are connected to the internet either by ethernet cable or wifi before you start.
 
 1. Start by opening a Terminal window from the taskbar or applications menu:
 
     ![Open Terminal window](images/open-terminal.png)
 
-1. Next, you'll need to install `pip` with the following command:
+1. Next, you'll need to install `pip` by typing the following command and pressing **Enter** on the keyboard:
 
     ```bash
     sudo apt-get install python-pip
     ```
     `pip` is a tool for installing Python packages from the Python Packaging Index (PyPi): you can browse packages at [pypi.python.org](https://pypi.python.org/).
 
-1. Now use `pip` to install Flask:
+1. Now use `pip` to install Flask by typing:
 
     ```bash
     sudo pip install flask
     ```
+    And press **enter**.
 
 ## Building a basic Flask web application
 
