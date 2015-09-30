@@ -122,7 +122,7 @@ In a web application, a route is a certain path into your website, determined by
 
     ![Yummy Cakes](images/flask-cakes.png)
 
-### Add HTML templates to your web app
+## Add HTML templates to your web app
 
 Next you'll modify your existing routes to return full HTML templates rather than simple text strings.
 
@@ -148,7 +148,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
     </html>
     ```
 
-1. Save the file as `index.html` in the `templates` directory.
+1. Save the file as `index.html` in the `templates` directory which you'll find inside `Pi` and then `webapp` directories.
 
 1. Return to your `app.py` file in IDLE and modify the first line of your code to import the `render_template` function as well:
 
@@ -197,7 +197,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
 
 1. Save the file.
 
-1. Now modify your HTML template to include the CSS file by adding a `<head>` tag containing a `<link>` tag with a reference to the stylesheet:
+1. Now modify your HTML template called `index.html` to include the CSS file by adding a `<head>` tag containing a `<link>` tag with a reference to the stylesheet:
 
     ```html
     <html>
@@ -214,7 +214,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
 
     ![Flask app with colour](images/flask-app-with-colour.png)
 
-Your `webapp` project directory should look something like this now:
+You have so far created a number of files and directories. It is worth just double checking your `webapp` project directory which should cotain the following and have a structure like this now:
 
 ```
 ├── app.py
