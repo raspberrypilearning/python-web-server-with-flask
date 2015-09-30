@@ -33,7 +33,7 @@ Now you're going to set up a basic web application with Flask and Python. You wi
     ```bash
     mkdir webapp
     ```
-    
+
     `mkdir` means "make directory": a directory is a folder. It can contain files and more folders.
 
 1. Navigate into this directory using the `cd` command and pressing **enter**:
@@ -148,7 +148,7 @@ Next you'll modify your existing routes to return full HTML templates rather tha
     </html>
     ```
 
-1. Save the file as `index.html` in the `templates` directory which you'll find inside `Pi` and then `webapp` directories.
+1. Save the file as `index.html` in the `templates` directory which you'll find inside `pi` and then `webapp` directories.
 
 1. Return to your `app.py` file in IDLE and modify the first line of your code to import the `render_template` function as well:
 
@@ -214,7 +214,7 @@ Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the 
 
     ![Flask app with colour](images/flask-app-with-colour.png)
 
-You have so far created a number of files and directories. It is worth just double checking your `webapp` project directory which should cotain the following and have a structure like this now:
+You have so far created a number of files and directories. It is worth just double checking your `webapp` project directory which should contain the following and have a structure like this now:
 
 ```
 ├── app.py
