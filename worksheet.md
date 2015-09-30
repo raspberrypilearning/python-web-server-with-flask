@@ -26,23 +26,24 @@ First you're going to install the Flask package. Make sure you are connected to 
 
 ## Building a basic Flask web application
 
-Now you're going to set up the most basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
+Now you're going to set up a basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
 
-1. Return to the Terminal window and create a new folder in your document called `webapp`:
+1. Return to the Terminal window and create a new folder called `webapp` by typing:
 
     ```bash
     mkdir webapp
     ```
+    
     `mkdir` means "make directory": a directory is a folder. It can contain files and more folders.
 
-1. Navigate into this directory using the `cd` command:
+1. Navigate into this directory using the `cd` command and pressing **enter**:
 
     ```bash
     cd webapp
     ```
     `cd` means "change directory": you use it to enter a folder.
 
-1. Flask applications can be run from a single file. Now create the file now using touch:
+1. Flask applications can be run from a single file, so you need to create the file now using the touch command like this:
 
     ```bash
     touch app.py
@@ -56,7 +57,7 @@ Now you're going to set up the most basic web application with Flask and Python.
     ```
     The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't "finish" until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.
 
-1. Two windows will have opened. One is the Python shell, and the other is an empty window with `app.py` in the title bar. Click on the `app.py` window to focus on it. You'll write your application code here and any printed messages or errors will be shown in the Python shell.
+1. An empty window with `app.py` displayed in the title bar will appear. You'll write your application code here and when you run your code any printed messages or errors will be shown in a Python shell window.
 
 1. Now enter the following lines into the blank `app.py` window:
 
