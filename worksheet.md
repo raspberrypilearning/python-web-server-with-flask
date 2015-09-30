@@ -251,7 +251,7 @@ Now you'll create a new route on your website so that when you go to `http://127
     ```
     Note here we've neglected the `<html>` and `<body>` tags. This is OK for testing but real websites should have a full HTML structure.
 
-1. Save the file, reload the web server and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
+1. Save the files, reload the web server and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
 
     ![Hello Paul!](images/flask-hello-paul.png)
 
