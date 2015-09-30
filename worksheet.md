@@ -80,8 +80,8 @@ Now you're going to set up a basic web application with Flask and Python. You wi
     If everything has been written correctly, you should see an output similar to this:
 
     ```
-    - Running on http://0.0.0.1:5000/
-    - Restarting with reloader
+    * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+    * Restarting with stat
     ```
 
 1. Open the Pi's web browser from the taskbar or application menu and enter `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
