@@ -94,7 +94,7 @@ Now you're going to set up a basic web application with Flask and Python. You wi
 
 Now you're going to add a new route to your web app, which will create another web page.
 
-1. In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
+In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
 
     In the "Hello Raspberry Pi" example we used a single route:
 
@@ -118,7 +118,7 @@ Now you're going to add a new route to your web app, which will create another w
         return 'Yummy cakes!'
     ```
 
-1. Now navigate to your website's cake page in the browser at `127.0.0.1:5000/cakes`. You should see a webpage with the text `Yummy cakes!` on it:
+1. Save your code and navigate to your website's cake page in the browser at `127.0.0.1:5000/cakes`. You should see a webpage with the text `Yummy cakes!` on it:
 
     ![Yummy Cakes](images/flask-cakes.png)
 
