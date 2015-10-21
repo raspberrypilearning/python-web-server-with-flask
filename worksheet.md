@@ -106,9 +106,9 @@ In the "Hello Raspberry Pi" example we used a single route:
 
 This route is page up of three parts:
 
-    - `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
-    - `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
-    - `return 'Hello world'`: this is the content of the web page which is returned when the user browses the index of the website.
+- `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
+- `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
+- `return 'Hello world'`: this is the content of the web page which is returned when the user browses the index of the website.
 
 1. Create a new route by adding the following lines below the first route:
 
