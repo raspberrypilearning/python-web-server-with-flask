@@ -96,19 +96,19 @@ Now you're going to add a new route to your web app, which will create another w
 
 In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled, and what each of them does.
 
-    In the "Hello Raspberry Pi" example we used a single route:
+In the "Hello Raspberry Pi" example we used a single route:
 
-    ```python
-    @app.route('/')
-    def index():
-        return 'Hello world'
-    ```
+```python
+@app.route('/')
+def index():
+    return 'Hello world'
+```
 
-    This route is page up of three parts:
+This route is page up of three parts:
 
-    - `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
-    - `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
-    - `return 'Hello world'`: this is the content of the web page which is returned when the user browses the index of the website.
+- `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
+- `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
+- `return 'Hello world'`: this is the content of the web page which is returned when the user browses the index of the website.
 
 1. Create a new route by adding the following lines below the first route:
 
