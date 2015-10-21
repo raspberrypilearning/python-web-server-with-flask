@@ -98,11 +98,11 @@ In a web application, a route is a certain path into your website, determined by
 
 In the "Hello Raspberry Pi" example we used a single route:
 
-    ```python
-    @app.route('/')
-    def index():
-        return 'Hello world'
-    ```
+```python
+@app.route('/')
+def index():
+    return 'Hello world'
+```
 
 This route is page up of three parts:
 
