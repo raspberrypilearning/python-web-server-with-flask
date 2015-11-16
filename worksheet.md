@@ -86,8 +86,9 @@ Now you're going to set up a basic web application with Flask and Python. You wi
     If everything has been written correctly, you should see an output similar to this:
 
     ```
-    * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
     * Restarting with stat
+    * Debugger is active!
+    * Debugger pin code: 425-241-775
     ```
 
 1. Open the Pi's web browser from the taskbar or application menu and navigate to `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
