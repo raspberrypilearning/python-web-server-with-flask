@@ -2,7 +2,7 @@
 
 Install the lightweight web framework Flask and set up a basic web server with different pages, using Python, HTML, and CSS.
 
-## Installing pip and Flask
+## Installing Flask
 
 First you're going to install the Flask package. Make sure you are connected to the internet, either by Ethernet cable or WiFi before you start.
 
@@ -10,59 +10,23 @@ First you're going to install the Flask package. Make sure you are connected to 
 
     ![Open Terminal window](images/open-terminal.png)
 
-1. Next, you'll need to install `pip` by typing the following command and pressing **Enter** on the keyboard:
+1. Now install Flask by typing:
 
     ```bash
-    sudo apt-get install python-pip
+    sudo apt-get install python3-flask
     ```
-    
-    `pip` is a tool for installing Python packages from the Python Packaging Index (PyPi): you can browse packages at [pypi.python.org](https://pypi.python.org/).
-
-1. Now use `pip` to install Flask by typing:
-
-    ```bash
-    sudo pip install flask
-    ```
-    
-    And press **enter**.
 
 ## Building a basic Flask web application
 
 Now you're going to set up a basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
 
-1. Return to the Terminal window and create a new folder called `webapp` by typing:
+1. Open the **File Manager** and create a new folder for your project.
 
-    ```bash
-    mkdir webapp
-    ```
+1. Open Python 3 from the main menu.
 
-    `mkdir` means "make directory": a directory is a folder which can contain files and more folders.
+1. Open a new window by clicking `File > New file`, and save this as `app.py` inside the project folder you created.
 
-1. Navigate into this directory by using the `cd` command and pressing **Enter**:
-
-    ```bash
-    cd webapp
-    ```
-    
-    `cd` means "change directory": you use it to enter a folder.
-
-1. Flask applications can be run from a single file, so you need to create the file now using the `touch` command, like this:
-
-    ```bash
-    touch app.py
-    ```
-    
-    This will create a file named `app.py`, in which all our application code will be written.
-
-1. Enter the following command to open this file in the **Python 2** IDE (IDLE), in order to get started writing your web app:
-
-    ```bash
-    idle app.py &
-    ```
-    
-    The ampersand (&) on the end of this command tells it to open IDLE in a new process. Unlike a command like `cd`, this command doesn't finish until you close the IDLE window. Opening IDLE in a new process allows you to enter more commands into the Terminal without quitting IDLE.
-
-1. An empty window with `app.py` displayed in the title bar will appear. You'll write your application code here and when you run your code, any printed messages or errors will be shown in a Python shell window.
+1. You'll write your application code here and when you run your code, any printed messages or errors will be shown in the Python shell window which opened first.
 
 1. Now enter the following lines into the blank `app.py` window:
 
@@ -81,14 +45,13 @@ Now you're going to set up a basic web application with Flask and Python. You wi
     
     Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
 
-1. Save the file with `Ctrl + S`. Now return to the Terminal window and enter `python app.py` to run the web server.
+1. Save the file with `Ctrl + S`. Now return to the Terminal window and enter `python3 app.py` to run the web server.
 
     If everything has been written correctly, you should see an output similar to this:
 
     ```
-    * Restarting with stat
-    * Debugger is active!
-    * Debugger pin code: 425-241-775
+    * Running on http://0.0.0.0:5000/
+    * Restarting with reloader
     ```
 
 1. Open the Pi's web browser from the taskbar or application menu and navigate to `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
@@ -173,7 +136,7 @@ Next, you'll modify your existing routes to return full HTML templates, rather t
     
     Flask will look for `index.html` in a directory called `templates`, in the same directory as the `app.py` file.
 
-1. Save the file. Make sure your web app is still running. If you stopped it, just run `python app.py` from your `webapp` directory.
+1. Save the file. Make sure your web app is still running. If you stopped it, just run `python3 app.py` from your `webapp` directory.
 
 1. Reload the route in your web browser (go to the base route at `http://127.0.0.1:5000/`) to see your new HTML template being displayed.
 
