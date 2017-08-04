@@ -4,7 +4,7 @@ hero_image: images/banner.png
 description: Install the Python web framework Flask and set up a basic web server
   with different pages
 original_url: https://raspberrypi.org/learning/python-web-server-with-flask
-theme: red
+theme: yellow
 duration: 2
 listed: true
 ingredient: false
