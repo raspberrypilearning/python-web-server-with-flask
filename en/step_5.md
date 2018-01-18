@@ -2,7 +2,17 @@
 
 Now you're going to set up a basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
 
-- Open the **File Manager** and create a new folder for your project.
+- Using the Terminal, make a new directory for your project.
+
+```bash
+mkdir webapp
+```
+
+- Use the change directory command to open it.
+
+```bash
+cd webapp
+```
 
 - Open Python 3 from the main menu.
 
@@ -27,7 +37,9 @@ Now you're going to set up a basic web application with Flask and Python. You wi
     
     Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
 
-- Save the file with `Ctrl + S`. Now return to the Terminal window and enter `python3 app.py` to run the web server.
+- Save the file with `Ctrl + S`. 
+
+- Return to the Terminal window and enter `python3 app.py` to run the web server.
 
     If everything has been written correctly, you should see an output similar to this:
 
