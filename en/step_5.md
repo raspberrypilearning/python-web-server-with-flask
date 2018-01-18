@@ -5,13 +5,13 @@ Now you're going to set up a basic web application with Flask and Python. You wi
 - Using the Terminal, make a new directory for your project.
 
 ```bash
-mkdir mywebserver
+mkdir webapp
 ```
 
 - Use the change directory command to open it.
 
 ```bash
-cd mywebserver
+cd webapp
 ```
 
 - Open Python 3 from the main menu.
