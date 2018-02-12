@@ -13,4 +13,4 @@ For solutions and project materials, see [en/resources](https://github.com/raspb
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Licence
- See [LICENSE.md](LICENSE.md)
+ See [LICENCE.md](LICENCE.md)
