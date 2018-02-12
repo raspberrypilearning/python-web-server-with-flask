@@ -2,22 +2,15 @@
 
 Install the lightweight web framework Flask and set up a basic web server with different pages using Python, HTML, and CSS.
 
-![Python Web Server with Flask](cover.png)
+![Python Web Server with Flask](/en/images/banner.png)
 
-## Requirements
+Find the project online at [projects.raspberrypi.org/en/projects/python-web-server-with-flask](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask)
 
-You'll need a Raspberry Pi and an SD card with the latest Raspbian installed, and you'll need to be connected to the internet.
+## Resources
+For solutions and project materials, see [en/resources](https://github.com/raspberrypilearning/python-web-server-with-flask/tree/master/en/resources)
 
-## Worksheet
-
-Go to the [worksheet](worksheet.md)
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Licence
-
-Unless otherwise specified, everything in this repository is covered by the following licence:
-
-[![Creative Commons Attribution 4.0 International Licence](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-
-***Python Web Server with Flask*** by [Paul Hallett](https://github.com/phalt) the [Raspberry Pi Foundation](https://www.raspberrypi.org/) is licensed under a [Creative Commons Attribution 4.0 International Licence](http://creativecommons.org/licenses/by-sa/4.0/).
-
-Based on a work at https://github.com/raspberrypilearning/python-web-server-with-flask
+ See [LICENSE.md](LICENSE.md)
