@@ -1,19 +1,22 @@
 ---
 title: Build a Python Web Server with Flask
 hero_image: images/banner.png
-description: Install the Python web framework Flask and set up a basic web server
-  with different pages
+description: Install the Python web framework Flask and set up a basic web server with different pages
 original_url: https://raspberrypi.org/learning/python-web-server-with-flask
 theme: yellow
 duration: 2
 listed: true
 ingredient: false
 copyedit: true
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
 interests: ''
-technologies: python, html/css
-site_areas: ''
-steps:
+technologies: raspberry-pi, python, html-css-javascript
+site_areas: projects
+hardware: ''
+software: python, html-css-javascript
+version: 4
+last_tested: 2017-01-01
+steps: 
 - title: Introduction
 - title: What you will need
 - title: Build a Python-powered web server with Flask
@@ -25,4 +28,3 @@ steps:
 - title: Adding dynamic content to a view
 - title: Browsing on other devices
 - title: What next?
-
