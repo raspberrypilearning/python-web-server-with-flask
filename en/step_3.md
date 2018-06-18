@@ -1,4 +1,14 @@
-## Build a Python-powered web server with Flask
+## Installing Flask
 
-Install the lightweight web framework Flask and set up a basic web server with different pages, using Python, HTML, and CSS.
+First you're going to install the Flask package. Make sure you are connected to the internet, either by Ethernet cable or WiFi before you start.
+
+- Start by opening a Terminal window from the taskbar or applications menu:
+
+    ![Open Terminal window](images/open-terminal.png)
+
+- Now install Flask by typing:
+
+    ```bash
+    sudo apt-get install python3-flask
+    ```
 
