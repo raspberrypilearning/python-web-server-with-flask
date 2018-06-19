@@ -1,44 +1,20 @@
-## Adding dynamic content to a view
+## Browsing on other devices
 
-So far you've learned to deliver HTML template through a web server running on your Raspberry Pi. Wouldn't it be good if you could add some dynamic content to the pages to display different information? Large websites like Facebook, YouTube and BBC News show different content depending on the route you visit, even though the templates are very similar.
+Since we used `host='0.0.0.0'`, on the `app.run` line, the web server is accessible to any device on the same network, including other computers, tablets, and smartphones.
 
-Now you'll create a new route on your website so that when you go to `http://127.0.0.1/hello/name`, it will say "Hello name!" and replace 'name' with whatever you put there; so `/hello/Paul/` will display "Hello Paul!".
+- Enter the following command in the Terminal window to find your Raspberry Pi's IP address:
 
-- Create a new route in your application like so:
-
-    ```python
-    @app.route('/hello/<name>')
-    def hello(name):
-        return render_template('page.html', name=name)
-    ```
-
-    - `@app.route('/hello/<name>')` - the `<name>` part means it passes the name into the `hello` function as a variable called `name`
-    - `def hello(name)` - this is the function that determines what content is shown - this time it takes the given name as a parameter
-    - `return render_template('page.html', name=name)` - here we look up the template `page.html` and pass in the variable `name` from the URL, so the template can use it
-
-- Create a new HTML template called `page.html` using the text editor, and add the following HTML code to it:
-
-    ```html
-    <h1>Hello {{ name }}!</h1>
+    ```bash
+    hostname -I
     ```
     
-    Note here we've neglected the `<html>` and `<body>` tags. This is OK for testing but real websites should have a full HTML structure.
+    You should get something like `192.168.1.3`.
 
-- Save the files, reload the web server and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
+- Take another computer, tablet or smartphone, and make sure it's connected to the same network as the Raspberry Pi.
 
-    ![Hello Paul!](images/flask-hello-paul.png)
+- Open up a web browser on the other device and enter the Raspberry Pi's IP address into the address bar with `:5000` on the end e.g. `http://192.168.1.3:5000/`:
 
-    Try it with different names!
+    ![Address bar](images/flask-on-android.png)
 
-### What's happening here?
-
-Flask uses `jinja`, a Python library for rendering templates. Use the braces (curly brackets) on this line:
-
-```html
-<h1>Hello {{ name }}!</h1>
-```
-
-It tells the template to render the variable `name` which was passed in the route function `hello`.
-
-What happens when you just visit `127.0.0.1:5000/hello/` without a name? Think about how you can prevent this giving an error.
+- You should now see the web app from the other device. Try navigating to the other pages too.
 

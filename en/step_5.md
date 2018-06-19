@@ -1,56 +1,32 @@
-## Building a basic Flask web application
+## Adding a new route to your web app
 
-Now you're going to set up a basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
+Now you're going to add a new route to your web app, which will create another web page.
 
-- Using the Terminal, make a new directory for your project.
+In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled and what each of them does.
 
-```bash
-mkdir webapp
+In the "Hello World" example we used a single route:
+
+```python
+@app.route('/')
+def index():
+    return 'Hello world'
 ```
 
-- Use the change directory command to open it.
+This route is made up of three parts:
 
-```bash
-cd webapp
-```
+- `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
+- `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
+- `return 'Hello world'`: this is the content of the web page, which is returned when the user browses the index of the website.
 
-- Open Python 3 from the main menu.
-
-- Open a new window by clicking `File > New file`, and save this as `app.py` inside the project folder you created.
-
-- You'll write your application code here and when you run your code, any printed messages or errors will be shown in the Python shell window which opened first.
-
-- Now enter the following lines into the blank `app.py` window:
+- Create a new route by adding the following lines below the first route:
 
     ```python
-    from flask import Flask
-
-    app = Flask(__name__)
-
-    @app.route('/')
-    def index():
-        return 'Hello world'
-
-    if __name__ == '__main__':
-        app.run(debug=True, host='0.0.0.0')
-    ```
-    
-    Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
-
-- Save the file with `Ctrl + S`. 
-
-- Return to the Terminal window and enter `python3 app.py` to run the web server.
-
-    If everything has been written correctly, you should see an output similar to this:
-
-    ```
-    * Running on http://0.0.0.0:5000/
-    * Restarting with reloader
+    @app.route('/cakes')
+    def cakes():
+        return 'Yummy cakes!'
     ```
 
-- Open the Pi's web browser from the taskbar or application menu and navigate to `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
+- Save your code and navigate to your website's cake page in the browser at `127.0.0.1:5000/cakes`. You should see a webpage with the text `Yummy cakes!` on it:
 
-    ![Flask Hello world](images/flask-hello-world.png)
-
-    *Note: `127.0.0.1` means 'home' i.e. this computer, and `:5000` means 'port 5000', which is the port the web server is running on*
+    ![Yummy Cakes](images/flask-cakes.png)
 
