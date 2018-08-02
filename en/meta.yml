@@ -18,12 +18,11 @@ version: 4
 last_tested: 2017-01-01
 steps: 
 - title: Introduction
-- title: What you will need
-- title: Installing Flask
-- title: Building a basic Flask web application
-- title: Adding a new route to your web app
+- title: Building a simple Flask web application
+- title: Adding a 2nd page to your web app
 - title: Add HTML templates to your web app
+- title: "Challenge: Add a HTML template to your 2nd page"
+  challenge: true
 - title: Adding colour to the web page with CSS
 - title: Adding dynamic content to a view
-- title: Browsing on other devices
 - title: What next?

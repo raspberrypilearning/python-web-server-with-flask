@@ -1,52 +1,86 @@
-## Add HTML templates to your web app
+## Adding colour to the web page with CSS
 
-Next, you'll modify your existing routes to return full HTML templates, rather than simple text strings.
+Cascading Style Sheets (CSS) are rules for how HTML content is displayed by the browser. Now you'll add some CSS to add colour to your web page.
 
-- First, create a `templates` directory in your `webapp` directory by entering this into the Terminal:
+--- task ---
 
-    ```bash
-    mkdir templates
-    ```
+First, return to the Terminal / Command Prompt and navigate to the `webapp` directory. If you're in the `templates` directory, go back up one level with `cd ..`.
 
-- Open `Text Editor` under `Accessories` in the main menu:
+--- /task ---
 
-    ![Text Editor](images/open-text-editor.png)
+--- task ---
 
-    This will open up a basic text editor called Leafpad.
+Create a new directory called `static`.
 
-- Enter the following HTML code:
+```bash
+mkdir static
+```
 
-    ```html
-    <html>
-    <body>
-    <h1>Hello from a template!</h1>
-    </body>
-    </html>
-    ```
+--- /task ---
 
-- Save the file as `index.html` in the `templates` directory, which you'll find inside the `pi` and then `webapp` directories.
+--- task ---
 
-- Return to your `app.py` file in IDLE and modify the first line of your code to import the `render_template` function as well:
+Create a new file in IDLE by clicking **File**, **New File** and save this file as `style.css` in the `static` folder you just created.
 
-    ```python
-    from flask import Flask, render_template
-    ```
+--- /task ---
 
-- Finally, you'll need to modify your index view to return the HTML template instead of the normal text. Change the `index()` function to this:
+--- task ---
 
-    ```python
-    @app.route('/')
-    def index():
-        return render_template('index.html')
-    ```
-    
-    Flask will look for `index.html` in a directory called `templates`, in the same directory as the `app.py` file.
+Add the following CSS rules to the file:
 
-- Save the file. Make sure your web app is still running. If you stopped it, just run `python3 app.py` from your `webapp` directory.
+```css
+body {
+    background: red;
+    color: yellow;
+}
+```
 
-- Reload the route in your web browser (go to the base route at `http://127.0.0.1:5000/`) to see your new HTML template being displayed.
+![idle css](images/idle-css.png)
 
-    ![Hello from a template!](images/flask-template.png)
+**Note:** you have used colour names but you could also create colours using hex codes like `#ff0000` (red).
 
-    In this case it's not much different as all you've done is added a header, but there's plenty of scope to expand!
+--- /task ---
+
+--- task ---
+
+Save your changes.
+
+--- /task ---
+
+--- task ---
+
+Now modify your HTML template called `index.html` to include the CSS file, by adding a `<head>` tag containing a `<link>` tag with a reference to the stylesheet:
+
+```html
+<html>
+<head>
+<link rel="stylesheet" href='/static/style.css' />
+</head>
+<body>
+<h1>My website</h1>
+</body>
+</html>
+```
+
+--- /task ---
+
+--- task ---
+
+Save the change to `index.html` and refresh your browser. You should see a colourful version of the web app!
+
+![Flask app with colour](images/flask-app-with-colour.png)
+
+--- /task ---
+
+You have so far created a number of files and directories. It is worth just double-checking your `webapp` project directory, which should contain the following and have a structure like this now:
+
+```
+├── app.py
+├── static
+│   └── style.css
+└── templates
+    └── index.html
+```
+
+If your web app doesn't look right, check you saved your CSS file in the right place.
 
