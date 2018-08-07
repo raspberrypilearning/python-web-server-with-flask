@@ -2,13 +2,13 @@
 
 ### What you will make
 
-A simple web site using Flask, Python, HTML and CSS, which you can turn into your own web app.
+You'll create a simple website, which you can turn into your own web app, using Flask, Python, and HTML/CSS.
 
 ![flash website](images/showcase.png)
 
 ### What you will need
 
-A computer with Python 3 installed.
++ A computer with Python 3 installed
 
 [[[generic-python-install-python3]]]
 
