@@ -1,8 +1,8 @@
-## Building a simple Flask web application
+## Build a Flask web application
 
-Now you're going to set up a basic web application with Flask and Python.
+You're going to set up a basic web application with Flask and Python.
 
-First you're going to install the Flask package. Make sure you are connected to the internet before you start.
+First you'll need to install the Flask package. Make sure you are connected to the internet before you start.
 
 --- task ---
 
@@ -12,11 +12,11 @@ Install the `flask` python module using `pip`.
 
 --- /task ---
 
-Once Flask is installed you can create your web application.
+Once Flask is installed, you can create your web application.
 
 --- task ---
 
-Using the Terminal or Command Prompt, make a new directory for your project.
+Open a terminal or command prompt window, and create a new directory for your project.
 
 ```bash
 mkdir webapp
@@ -26,7 +26,7 @@ mkdir webapp
 
 --- task ---
 
-Use the change directory command to open it.
+Use the change directory command `cd` to open the new directory.
 
 ```bash
 cd webapp
@@ -41,13 +41,13 @@ Open Python 3 IDLE.
 
 --- task ---
 
-Create a new file by clicking **File**, **New file**, and save this as `app.py` inside the `webapp` folder you just created.
+Create a new file by clicking **File** and then **New file**, and save it as `app.py` inside the `webapp` folder you just created.
 
 --- /task ---
 
 --- task ---
 
-Now enter the following lines into the blank `app.py` window:
+Now enter the following lines of code into the blank `app.py` window:
 
 ```python
 from flask import Flask
@@ -70,25 +70,25 @@ if __name__ == '__main__':
 
 --- task ---
 
-Save your changes by clicking **File**, **Save** or pressing **Ctrl + S**. 
+Save your changes by clicking **File** and then **Save**, or by pressing <kbd>Ctrl</kbd> and <kbd>S</kbd>. 
 
 --- /task ---
 
-You will need to run your web app from the Terminal or Command Prompt you opened earlier.
+You will need to run your web app from the terminal/command prompt windpw you opened earlier.
 
 --- task ---
 
-### Raspberry Pi / Linux / macOS
+### On Raspberry Pi/Linux/macOS
 
-Enter the command `python3 app.py` into the Terminal.
+Enter the command `python3 app.py` into the terminal window.
 
-### Windows
+### On Windows
 
-Enter the command `python app.py` into the Command Prompt.
+Enter the command `python app.py` into the command prompt window.
 
 --- /task ---
 
-If everything has been setup correctly, you should see an output similar to this:
+If everything has been set up correctly, you should see an output similar to this:
 
 ```
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
@@ -101,9 +101,9 @@ If everything has been setup correctly, you should see an output similar to this
 
 --- task ---
 
-Open your web browser and enter the URL `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
+Open your web browser and enter the URL `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`.
 
-**Note:** `127.0.0.1` means 'home' i.e. this computer, and `:5000` means 'port 5000', which is the port the web server is running on.
+**Note:** `127.0.0.1` means 'home', i.e. this computer. `:5000` means 'port 5000', which is the port the web server is running on.
 
 --- /task ---
 
