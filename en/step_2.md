@@ -16,7 +16,7 @@ Once Flask is installed, you can create your web application.
 
 --- task ---
 
-Open a terminal or command prompt window, and create a new directory for your project.
+Open a terminal or command prompt window, and make a new directory called `webapp` for your project.
 
 ```bash
 mkdir webapp
