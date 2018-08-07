@@ -9,6 +9,7 @@ You'll create a simple website, which you can turn into your own web app, using 
 ### What you will need
 
 + A computer with Python 3 installed
++ An internet connection
 
 [[[generic-python-install-python3]]]
 
