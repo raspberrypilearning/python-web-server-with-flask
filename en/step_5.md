@@ -1,12 +1,12 @@
-## Challenge: Add a HTML template to your 2nd page
+## Challenge: add a HTML template to the second page
 
-Now you have changed your `index` page to use a HTML template now do the same for your `cakes` page?
+Now you've learn how to change your 'index' page to use a HTML template, do the same for your 'cakes' page!
 
 --- hints ---
 
 --- hint ---
 
-Repeat the same process to create the index template for the cakes page.
+Repeat the same steps you've just followed to create a template for the cakes page.
 
 --- /hint ---
 
@@ -20,7 +20,7 @@ Modify the `cakes()` function in `app.py` to use `render_template`.
 
 --- hint ---
 
-Create a `cakes.html` files and save it in `templates` with the code:
+Edit your `cakes.html` file by adding this code:
 
 ```html
 <html>
