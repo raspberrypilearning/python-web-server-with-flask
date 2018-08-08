@@ -1,6 +1,6 @@
 ## Add colour with CSS
 
-Now you'll add some CSS to add colour to your web page. Cascading style sheets (CSS) are rules for how a browser displays HTML content.
+Now you'll add some Cascading style sheets (CSS) to add colour to your web page. Cascading style sheets are rules for how a browser displays HTML content.
 
 --- task ---
 
@@ -37,7 +37,7 @@ body {
 
 ![idle css](images/idle-css.png)
 
-**Note:** you have used colour name here, but you could also create colours using hex codes like `#ff0000` (red).
+**Note:** you have used colour names here, but you could also create colours using hex codes like `#ff0000` (red).
 
 --- /task ---
 
@@ -49,7 +49,7 @@ Save your changes.
 
 --- task ---
 
-Now modify your `index.html` HTML template to include the CSS file by adding a `<head>` tag containing a `<link>` tag with a reference to the stylesheet:
+Now modify your `index.html` HTML template to include the CSS rules by adding a `<head>` tag containing a `<link>` tag with a reference to the style sheet file:
 
 ```html
 <html>
