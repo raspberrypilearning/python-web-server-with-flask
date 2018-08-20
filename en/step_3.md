@@ -2,7 +2,7 @@
 
 Now you're going to add a new page to your web app by creating a new **route**.
 
-In a web application, a route is a certain path into your website, determined by the request a user sends by type into the web browser's address bar. It's up to you which routes are enabled and what each of them does.
+In a web application, a route is a certain path into your website, determined by the request a user sends by typing into their web browser's address bar. It's up to you which routes are enabled and what each of them does.
 
 In the 'Hello World' example, we used a single route:
 
