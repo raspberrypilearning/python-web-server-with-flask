@@ -1,6 +1,8 @@
-## Add HTML templates
+## Using HTML
 
-Next, you'll modify your existing routes to return full HTML templates rather than just simple text.
+Next, you'll modify your existing routes to return a full HTML web page rather than just simple text.
+
+The HTML web page will be created from a **template**, this which holds the static content of the page and you will see later how to insert data into the template to create a dynamic page.
 
 --- task ---
 
@@ -60,7 +62,7 @@ def index():
     return render_template('index.html')
 ```
 
-Flask will look for `index.html` in the same directory the `app.py` program is in, meaning `templates`.
+Flask will look for `index.html` in the `templates` directory that the `app.py` program is in.
 
 --- /task ---
 
@@ -76,7 +78,7 @@ Load the `http://127.0.0.1:5000/` page in your web browser to see your new HTML 
 
 ![my website](images/flask-template.png)
 
-In this case it's not much different, as all you've done is added a header, but there's plenty of scope to expand!
+In this case it's not much different, as all you've done is added a HTML header, but there's plenty of scope to expand!
 
 --- /task ---
 

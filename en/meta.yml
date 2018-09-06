@@ -18,11 +18,11 @@ version: 4.1
 last_tested: 2018-08-02
 steps: 
 - title: Introduction
-- title: Building a simple Flask web application
-- title: Adding a 2nd page to your web app
-- title: Add HTML templates to your web app
+- title: Build a Flask website
+- title: Add a new page
+- title: Using HTML
 - title: "Challenge: Add a HTML template to your 2nd page"
   challenge: true
-- title: Adding colour to the web page with CSS
-- title: Adding dynamic content to a view
+- title: Add colour with CSS
+- title: Adding dynamic content
 - title: What next?

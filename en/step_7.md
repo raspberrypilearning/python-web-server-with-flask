@@ -1,6 +1,6 @@
-## Adding dynamic content to a view
+## Adding dynamic content
 
-So far you've learned to deliver static HTML web pages using templates. Wouldn't it be good if you could add some dynamic content to the pages to display different information? Large websites like Facebook, YouTube and BBC News show different content depending on the route you visit, even though the templates are very similar.
+So far you've learned to deliver static HTML web pages using templates. Lets add some dynamic content to the pages to display different information. Large websites like Facebook, YouTube and BBC News show different content depending on the page you visit, even though the templates are very similar.
 
 Now you'll create a new route on your website so that when you go to `http://127.0.0.1/hello/name`, it will say "Hello name!" and replace 'name' with whatever you put there; so `/hello/Paul/` will display "Hello Paul!".
 

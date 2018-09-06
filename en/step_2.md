@@ -1,4 +1,4 @@
-## Build a Flask web application
+## Build a Flask website
 
 You're going to set up a basic web application with Flask and Python.
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
 
-**Note:** the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
+You will explore this code in more detail in the next step but for now lets keep it simple and make sure everything works.
 
 ![idle](images/idle-flask.png)
 
@@ -74,7 +74,7 @@ Save your changes by clicking **File** and then **Save**, or by pressing <kbd>Ct
 
 --- /task ---
 
-You will need to run your web app from the terminal/command prompt windpw you opened earlier.
+You will need to run your web app from the terminal/command prompt window you opened earlier.
 
 --- task ---
 

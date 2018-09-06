@@ -2,9 +2,11 @@
 
 ### What you will make
 
-You'll create a simple website, which you can turn into your own web app, using Flask, Python, and HTML/CSS.
+You'll setup a web server and create a simple website using Flask, Python, and HTML/CSS.
 
-![flash website](images/showcase.png)
+![flask web app](images/showcase.png)
+
+The web server will be able to react to user input creating dynamic content turning your website into a web application capable of doing more than just showing static information.
 
 ### What you will need
 
