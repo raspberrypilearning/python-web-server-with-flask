@@ -58,7 +58,7 @@ Flask uses `jinja`, a Python library for rendering templates. Using the braces (
 
 ... tells the template to render the variable `name` which was passed in the route function `hello`.
 
-Visiting `127.0.0.1:5000/hello/` without a name will create an error. Think about how you can prevent.
+Visiting `127.0.0.1:5000/hello/` without a name will create an error. Think about how you can prevent this from happening.
 
 --- /collapse ---
 
