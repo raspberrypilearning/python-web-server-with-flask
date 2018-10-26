@@ -6,7 +6,7 @@ First you'll need to install the Flask package. Make sure you are connected to t
 
 --- task ---
 
-Install the `flask` python module using `pip`.
+Install the `flask` Python module using `pip`.
 
 [[[generic-python-installing-with-pip]]]
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
 
-You will explore this code in more detail in the next step but for now lets keep it simple and make sure everything works.
+You will explore this code in more detail in the next step, but for now let's keep it simple and make sure everything works.
 
 ![idle](images/idle-flask.png)
 
