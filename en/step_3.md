@@ -18,14 +18,12 @@ This route is made up of three parts:
 - `def index()`: this is the name you give to the route; this one is called `index`, because it's the index (or home page) of the website
 - `return 'Hello world'`: this is the content of the web page, which is returned when the user goes to this URL
 
-The 2nd part of the `app.py` code:
+The 2nd part of the `app.py` code runs the web server and your app:
 
 ```python
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
-
-Runs the web server and your app.
 
 **Note:** the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
 
@@ -72,7 +70,7 @@ if __name__ == '__main__':
 
 --- task ---
 
-Save your code and navigate to your 'cakes' page in the browser at `127.0.0.1:5000/cakes`. You should see a web page with the text 'Yummy cakes!' on it:
+Save your code and navigate to your 'cakes' page in the browser at `127.0.0.1:5000/cakes`. You should see a web page with the text "Yummy cakes!" on it:
 
 ![Yummy Cakes](images/flask-cakes.png)
 
