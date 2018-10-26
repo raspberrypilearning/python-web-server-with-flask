@@ -2,11 +2,11 @@
 
 ### What you will make
 
-You'll setup a web server and create a simple website using Flask, Python, and HTML/CSS.
+You'll set up a web server and create a simple website using Flask, Python, and HTML/CSS.
 
 ![flask web app](images/showcase.png)
 
-The web server will be able to react to user input creating dynamic content turning your website into a web application capable of doing more than just showing static information.
+The web server will be able to react to the user inputting dynamic content, turning your website into a web application capable of doing more than just showing static information.
 
 ### What you will need
 
