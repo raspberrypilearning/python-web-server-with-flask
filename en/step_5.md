@@ -1,6 +1,6 @@
 ## Challenge: Add a HTML template to the second page
 
-Now you've learn how to change your 'index' page to use a HTML template, do the same for your 'cakes' page!
+Now you've learnt how to change your 'index' page to use a HTML template, do the same for your 'cakes' page!
 
 --- hints ---
 
