@@ -2,7 +2,7 @@
 
 Next, you'll modify your existing routes to return a full HTML web page rather than just simple text.
 
-The HTML web page will be created from a **template**, this which holds the static content of the page and you will see later how to insert data into the template to create a dynamic page.
+The HTML web page will be created from a **template** that holds the static content of the page. You'll later learn how to insert data to create a dynamic version of the page.
 
 --- task ---
 
