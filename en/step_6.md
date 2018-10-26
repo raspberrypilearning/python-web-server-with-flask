@@ -1,6 +1,6 @@
 ## Add colour with CSS
 
-Now you'll add some Cascading style sheets (CSS) to add colour to your web page. Cascading style sheets are rules for how a browser displays HTML content.
+Now you'll add some Cascading Style Sheets (CSS) to add colour to your web page. Cascading Style Sheets are rules for how a browser displays HTML content.
 
 --- task ---
 
