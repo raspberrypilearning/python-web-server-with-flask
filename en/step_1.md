@@ -1,18 +1,46 @@
-## What you will make
-Install the lightweight web framework Flask and set up a basic web server with different pages using Python, HTML, and CSS.
+## Introduction
 
-## What you will learn
- By following this resource and setting up a Flask web server you will learn:
+### What you will make
 
- - How to install software on your Raspberry Pi
- - How to install pip and Flask to create a Python-powered web server
- - How to build a basic web app with Flask and run it as a local website on your Raspberry Pi
- - How routes are used to map URLs to web pages
- - How to use HTML to create simple web page templates
- - How to use CSS to control the appearance of HTML content
- - How to configure Flask and make your website accessible to other devices on your local network
+You'll set up a web server and create a simple website using Flask, Python, and HTML/CSS.
+
+![flask web app](images/showcase.png)
+
+The web server will be able to react to the user inputting dynamic content, turning your website into a web application capable of doing more than just showing static information.
+
+--- collapse ---
+
+---
+title: What you will need
+---
+
+### Hardware
+
++ Computer capable of running Python 3
+
+### Software
+
++ [Python 3](https://www.python.org/downloads/)
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: What you will learn
+---
+
+- How to install Python modules using pip
+- How to build a basic web app with Python and Flask
 
 This resource covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/):
+- [Apply abstraction and decomposition to solve more complex problems](https://curriculum.raspberrypi.org/programming/developer/)
 
-- [Combine programming constructs to solve a problem](https://www.raspberrypi.org/curriculum/programming/builder)
+--- /collapse ---
+
+--- no-print ---
+
+If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask/print){:target="_blank"}.
+
+--- /no-print ---
 

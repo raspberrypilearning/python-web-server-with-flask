@@ -10,20 +10,19 @@ ingredient: false
 copyedit: true
 curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
 interests: ''
-technologies: raspberry-pi, python, html-css-javascript
+technologies: python, html-css-javascript
 site_areas: projects
 hardware: ''
 software: python, html-css-javascript
-version: 4
-last_tested: 2017-01-01
+version: 4.1
+last_tested: 2018-08-02
 steps: 
 - title: Introduction
-- title: What you will need
-- title: Installing Flask
-- title: Building a basic Flask web application
-- title: Adding a new route to your web app
-- title: Add HTML templates to your web app
-- title: Adding colour to the web page with CSS
-- title: Adding dynamic content to a view
-- title: Browsing on other devices
+- title: Build a Flask website
+- title: Add a new page
+- title: Using HTML
+- title: "Challenge: Add a HTML template to your 2nd page"
+  challenge: true
+- title: Add colour with CSS
+- title: Adding dynamic content
 - title: What next?

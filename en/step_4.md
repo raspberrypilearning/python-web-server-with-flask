@@ -1,56 +1,84 @@
-## Building a basic Flask web application
+## Using HTML
 
-Now you're going to set up a basic web application with Flask and Python. You will be able to run a single web page and display some text on a web browser.
+Next, you'll modify your existing routes to return a full HTML web page rather than just simple text.
 
-- Using the Terminal, make a new directory for your project.
+The HTML web page will be created from a **template** that holds the static content of the page. You'll later learn how to insert data to create a dynamic version of the page.
 
-```bash
-mkdir webapp
-```
+--- task ---
 
-- Use the change directory command to open it.
+First, create a `templates` directory in your `webapp` directory by entering this into the terminal or command prompt window:
 
 ```bash
-cd webapp
+mkdir templates
 ```
 
-- Open Python 3 from the main menu.
+--- /task ---
 
-- Open a new window by clicking `File > New file`, and save this as `app.py` inside the project folder you created.
+--- task ---
 
-- You'll write your application code here and when you run your code, any printed messages or errors will be shown in the Python shell window which opened first.
+Create a new file in IDLE by clicking **File** and **New File**, and save this file as `index.html` in your `templates` folder.
 
-- Now enter the following lines into the blank `app.py` window:
+--- /task ---
 
-    ```python
-    from flask import Flask
+--- task ---
 
-    app = Flask(__name__)
+Enter the following HTML code in `index.html`:
 
-    @app.route('/')
-    def index():
-        return 'Hello world'
+```html
+<html>
+<body>
+<h1>My website</h1>
+</body>
+</html>
+```
 
-    if __name__ == '__main__':
-        app.run(debug=True, host='0.0.0.0')
-    ```
-    
-    Note here the `host='0.0.0.0'` means the web app will be accessible to any device on the network.
+![idle html](images/idle-html.png)
 
-- Save the file with `Ctrl + S`. 
+--- /task ---
 
-- Return to the Terminal window and enter `python3 app.py` to run the web server.
+--- task ---
 
-    If everything has been written correctly, you should see an output similar to this:
+Save your changes by clicking **File** and **Save**, or by pressing <kbd>Ctrl</kbd> and <kbd>s</kbd>. 
 
-    ```
-    * Running on http://0.0.0.0:5000/
-    * Restarting with reloader
-    ```
+--- /task ---
 
-- Open the Pi's web browser from the taskbar or application menu and navigate to `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`:
+--- task ---
 
-    ![Flask Hello world](images/flask-hello-world.png)
+Return to your `app.py` file in IDLE, and modify the first line of your code to import the `render_template` function from the `flask` module as well:
 
-    *Note: `127.0.0.1` means 'home' i.e. this computer, and `:5000` means 'port 5000', which is the port the web server is running on*
+```python
+from flask import Flask, render_template
+```
+
+--- /task ---
+
+--- task ---
+
+Finally, you'll need to modify your `index()` function to return the `index.html` HTML template instead of the normal text. Change the code inside the definition so that the code looks like this:
+
+```python
+@app.route('/')
+def index():
+    return render_template('index.html')
+```
+
+Flask will look for `index.html` in the `templates` directory that the `app.py` program is in.
+
+--- /task ---
+
+--- task ---
+
+Save the file. Make sure your `app.py` program is still running. If it's not, just run it again using the terminal/command prompt.
+
+--- /task ---
+
+--- task ---
+
+Load the `http://127.0.0.1:5000/` page in your web browser to see your new HTML template displayed.
+
+![my website](images/flask-template.png)
+
+In this case it's not much different, as all you've done is added a HTML header, but there's plenty of scope to expand!
+
+--- /task ---
 

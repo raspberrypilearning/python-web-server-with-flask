@@ -1,32 +1,43 @@
-## Adding a new route to your web app
+## Challenge: Add a HTML template to the second page
 
-Now you're going to add a new route to your web app, which will create another web page.
+Now you've learnt how to change your 'index' page to use a HTML template, do the same for your 'cakes' page!
 
-In a web application, a route is a certain path into your website, determined by the request sent by the user when they type it into their web browser. It's up to you which routes are enabled and what each of them does.
+--- hints ---
 
-In the "Hello World" example we used a single route:
+--- hint ---
 
-```python
-@app.route('/')
-def index():
-    return 'Hello world'
+Repeat the same steps you've just followed to create a template for the cakes page.
+
+--- /hint ---
+
+--- hint ---
+
+Create a `cakes.html` file and save it in `templates`.
+
+Modify the `cakes()` function in `app.py` to use `render_template`.
+
+--- /hint ---
+
+--- hint ---
+
+Your `cakes.html` template should look this:
+
+```html
+<html>
+<body>
+<h1>Yummy cakes!</h1>
+</body>
+</html>
 ```
 
-This route is made up of three parts:
+Modify the `cakes()` function in `app.py`:
 
-- `@app.route('/')`: this determines the entry point; the `/` means the root of the website, so just `http://127.0.0.1:5000/`.
-- `def index()`: this is the name we give to the route. Here it was called `index` because it's the index of the website.
-- `return 'Hello world'`: this is the content of the web page, which is returned when the user browses the index of the website.
+```python
+@app.route('/cakes')
+def cakes():
+    return render_template('cakes.html')
+```
 
-- Create a new route by adding the following lines below the first route:
+--- /hint ---
 
-    ```python
-    @app.route('/cakes')
-    def cakes():
-        return 'Yummy cakes!'
-    ```
-
-- Save your code and navigate to your website's cake page in the browser at `127.0.0.1:5000/cakes`. You should see a webpage with the text `Yummy cakes!` on it:
-
-    ![Yummy Cakes](images/flask-cakes.png)
-
+--- /hints ---
