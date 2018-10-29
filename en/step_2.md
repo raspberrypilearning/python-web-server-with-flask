@@ -2,11 +2,21 @@
 
 You're going to set up a basic web application with Flask and Python.
 
-First you'll need to install the Flask package. Make sure you are connected to the internet before you start.
+If you don't already have Python 3 on your computer you will need to download and install it.
 
 --- task ---
 
-Install the `flask` Python module using `pip`.
+[Download Python 3](https://www.python.org/downloads/) and install it.
+
+[[[generic-python-install-python3]]]
+
+--- /task ---
+
+You will also need to install the Flask package. 
+
+--- task ---
+
+Install the `flask` Python module using `pip`. Make sure you are connected to the internet before you start.
 
 [[[generic-python-installing-with-pip]]]
 

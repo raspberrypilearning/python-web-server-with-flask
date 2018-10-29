@@ -22,8 +22,6 @@ title: What you will need
 
 + [Python 3](https://www.python.org/downloads/)
 
-[[[generic-python-install-python3]]]
-
 --- /collapse ---
 
 --- collapse ---
