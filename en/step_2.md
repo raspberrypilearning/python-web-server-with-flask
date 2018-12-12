@@ -1,8 +1,8 @@
 ## Build a Flask website
 
-You're going to set up a basic web application with Flask and Python.
+First, set up a basic web application with Flask and Python.
 
-If you don't already have Python 3 on your computer you will need to download and install it.
+If you don't have Python 3 on your computer, you need to download and install it.
 
 --- task ---
 
@@ -12,7 +12,7 @@ If you don't already have Python 3 on your computer you will need to download an
 
 --- /task ---
 
-You will also need to install the Flask package. 
+You also need to install the Flask package. 
 
 --- task ---
 
@@ -26,7 +26,7 @@ Once Flask is installed, you can create your web application.
 
 --- task ---
 
-Open a terminal or command prompt window, and make a new directory called `webapp` for your project.
+Open a terminal or command prompt window, and use the `mkdir` command to create a new directory called `webapp`.
 
 ```bash
 mkdir webapp
@@ -36,7 +36,7 @@ mkdir webapp
 
 --- task ---
 
-Use the change directory command `cd` to open the new directory.
+Use the 'change directory' command `cd` to open the new directory.
 
 ```bash
 cd webapp
@@ -45,19 +45,19 @@ cd webapp
 
 --- task ---
 
-Open Python 3 IDLE.
+Open Python 3 IDLE, and create a new file by clicking on**File** and then on **New file**.
 
 --- /task ---
 
 --- task ---
 
-Create a new file by clicking **File** and then **New file**, and save it as `app.py` inside the `webapp` folder you just created.
+Save the new file with the name `app.py` inside the `webapp` folder.
 
 --- /task ---
 
 --- task ---
 
-Now enter the following lines of code into the blank `app.py` window:
+Now enter the following lines of code into the `app.py` file:
 
 ```python
 from flask import Flask
@@ -72,19 +72,19 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
 
-You will explore this code in more detail in the next step, but for now let's keep it simple and make sure everything works.
-
 ![idle](images/idle-flask.png)
+
+You will explore this code in more detail in the next step. But first, make sure the code works.
 
 --- /task ---
 
 --- task ---
 
-Save your changes by clicking **File** and then **Save**, or by pressing <kbd>Ctrl</kbd> and <kbd>S</kbd>. 
+Save your changes by clicking on **File** and then on **Save**, or by pressing <kbd>Ctrl</kbd> and <kbd>S</kbd> at the same time. 
 
 --- /task ---
 
-You will need to run your web app from the terminal/command prompt window you opened earlier.
+You need to run your web app from the terminal/command prompt window you opened earlier.
 
 --- task ---
 
@@ -98,7 +98,7 @@ Enter the command `python app.py` into the command prompt window.
 
 --- /task ---
 
-If everything has been set up correctly, you should see an output similar to this:
+If your code is correct, the window should show you output similar to this:
 
 ```
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
@@ -111,9 +111,9 @@ If everything has been set up correctly, you should see an output similar to thi
 
 --- task ---
 
-Open your web browser and enter the URL `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`.
+Now open your web browser and enter the URL `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`.
 
-**Note:** `127.0.0.1` means 'home', i.e. this computer. `:5000` means 'port 5000', which is the port the web server is running on.
+**Note:** `127.0.0.1` means 'home', i.e. your computer. `:5000` means 'port 5000', which is the port the web server is running on.
 
 --- /task ---
 
