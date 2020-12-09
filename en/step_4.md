@@ -1,12 +1,12 @@
-## Using HTML
+## Return HTML web pages
 
 Next, you'll modify your existing routes to return a full HTML web page rather than just simple text.
 
-The HTML web page will be created from a **template** that holds the static content of the page. You'll later learn how to insert data to create a dynamic version of the page.
+The HTML web page will be created from a **template** that holds the static content of the page. In a later section of this project, you'll learn how to insert data to create a dynamic version of the page.
 
 --- task ---
 
-First, create a `templates` directory in your `webapp` directory by entering this into the terminal or command prompt window:
+First, create a `templates` directory in your `webapp` directory by entering the following command into the terminal or command prompt window:
 
 ```bash
 mkdir templates
@@ -54,7 +54,7 @@ from flask import Flask, render_template
 
 --- task ---
 
-Finally, you'll need to modify your `index()` function to return the `index.html` HTML template instead of the normal text. Change the code inside the definition so that the code looks like this:
+Finally, modify your `index()` function to return the `index.html` HTML template instead of the normal text. Change the code inside the definition so that the code looks like this:
 
 ```python
 @app.route('/')
@@ -62,7 +62,7 @@ def index():
     return render_template('index.html')
 ```
 
-Flask will look for `index.html` in the `templates` directory that the `app.py` program is in.
+This code makes Flask look for `index.html` in the `templates` directory that the `app.py` program is in.
 
 --- /task ---
 
@@ -78,7 +78,7 @@ Load the `http://127.0.0.1:5000/` page in your web browser to see your new HTML 
 
 ![my website](images/flask-template.png)
 
-In this case it's not much different, as all you've done is added a HTML header, but there's plenty of scope to expand!
+In this case what you see is not much different, because the only new thing is a HTML header. There's plenty of scope to add other things!
 
 --- /task ---
 

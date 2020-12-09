@@ -4,7 +4,7 @@ Now you'll add some Cascading Style Sheets (CSS) to add colour to your web page.
 
 --- task ---
 
-First, return to the terminal/command prompt window and navigate to the `webapp` directory. If you're in the `templates` directory, go back up one level with `cd ..`.
+First, return to the terminal/command prompt window and navigate to the `webapp` directory. If you're in the `templates` directory, go up one level with the command `cd ..`.
 
 --- /task ---
 
@@ -20,7 +20,7 @@ mkdir static
 
 --- task ---
 
-Create a new file in IDLE by clicking **File** and **New File**, and save this file as `style.css` in the `static` folder you just created.
+Create a new file in IDLE by clicking **File** and **New File**, and save this file as `style.css` in the `static` folder.
 
 --- /task ---
 
@@ -37,7 +37,7 @@ body {
 
 ![idle css](images/idle-css.png)
 
-**Note:** you have used colour names here, but you could also create colours using hex codes like `#ff0000` (red).
+**Note:** this code contains colour names, but you could also create colours using hex codes like `#ff0000` (red).
 
 --- /task ---
 
@@ -66,15 +66,15 @@ Now modify your `index.html` HTML template to include the CSS rules by adding a 
 
 --- task ---
 
-Save the change to `index.html` and refresh your browser. You should see a colourful version of the web app!
+Save the change to `index.html` and refresh your browser. You should see a colourful version of your web app!
 
 ![Flask app with colour](images/flask-app-with-colour.png)
 
 --- /task ---
 
-If your web app doesn't look right, you may not have saved your CSS file in the right place.
+If your web app doesn't look right, your CSS file might not be in the right directory.
 
-By now you've created a number of files and directories for your web app. It is worth quickly double-checking your `webapp` project directory, which should contain the following and have a structure like this now:
+You now have a number of files and directories for your web app. It is worth making sure your `webapp` project directory contains the following files and has the following structure:
 
 ```
 ├── app.py

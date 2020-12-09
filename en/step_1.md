@@ -6,7 +6,7 @@ You'll set up a web server and create a simple website using Flask, Python, and 
 
 ![flask web app](images/showcase.png)
 
-The web server will be able to react to the user inputting dynamic content, turning your website into a web application capable of doing more than just showing static information.
+The web server will be able to react to the dynamic content that the user inputs, so your website will be a web application that can more than just show static information.
 
 --- collapse ---
 
@@ -16,7 +16,7 @@ title: What you will need
 
 ### Hardware
 
-+ Computer capable of running Python 3
++ A computer capable of running Python 3
 
 ### Software
 
@@ -30,7 +30,7 @@ title: What you will need
 title: What you will learn
 ---
 
-- How to install Python modules using pip
+- How to install Python modules using `pip`
 - How to build a basic web app with Python and Flask
 
 This resource covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/):

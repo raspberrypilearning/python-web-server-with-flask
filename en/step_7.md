@@ -1,12 +1,14 @@
-## Adding dynamic content
+## Add dynamic content
 
-So far you've learned to deliver static HTML web pages using templates. Lets add some dynamic content to the pages to display different information. Large websites like Facebook, YouTube and BBC News show different content depending on the page you visit, even though the templates are very similar.
+Now you know how to deliver static HTML web pages using templates. Large websites like Facebook, YouTube and BBC News have dynamic content: these websites show different content depending on the page you visit, even though the templates are very similar.
 
-Now you'll create a new route on your website so that when you go to `http://127.0.0.1/hello/name`, it will say "Hello name!" and replace 'name' with whatever you put there; so `/hello/Paul/` will display "Hello Paul!".
+You will now add some dynamic content to your pages so they can display different information. 
+
+Now you will create a new route on your website so that when you go to `http://127.0.0.1/hello/name`, the page says 'Hello name!', replacing 'name' with whatever you put there. So for example, `/hello/Dana/` displays 'Hello Dana!'.
 
 --- task ---
 
-Create a new route in your application like so:
+Add the following code to create a new route in your application:
 
 ```python
 @app.route('/hello/<name>')
@@ -14,9 +16,9 @@ def hello(name):
     return render_template('page.html', name=name)
 ```
 
-- `@app.route('/hello/<name>')` - the `<name>` part means it passes the name into the `hello` function as a variable called `name`
-- `def hello(name)` - this is the function that determines what content is shown - this time it takes the given name as a parameter
-- `return render_template('page.html', name=name)` - here we look up the template `page.html` and pass in the variable `name` from the URL, so the template can use it
+- `@app.route('/hello/<name>')`: the `<name>` part means it passes the name into the `hello` function as a variable called `name`.
+- `def hello(name)`: this is the function that determines what content is shown. Here, the function takes the given name as a parameter.
+- `return render_template('page.html', name=name)`: this code looks up the template `page.html` and passes in the variable `name` from the URL so that the template can use it.
 
 --- /task ---
 
@@ -36,11 +38,11 @@ Create a new HTML template called `page.html`, and add the following HTML code t
 
 --- task ---
 
-Save the files and visit `http://127.0.0.1:5000/hello/paul`. It should look like this:
+Save the files and visit `http://127.0.0.1:5000/hello/paul`. The page you see should look like this:
 
 ![Hello Paul!](images/flask-hello-paul.png)
 
-Try it with different names!
+Try `http://127.0.0.1/hello/name` with different names!
 
 --- /task ---
 
@@ -50,23 +52,23 @@ Try it with different names!
 title: What's happening here?
 ---
 
-Flask uses `jinja`, a Python library for rendering templates. Using the braces (curly brackets) on this line:
+Flask uses `jinja`, a Python library for rendering templates. Look at this code with the braces (curly brackets):
 
 ```html
 <h1>Hello {{ name }}!</h1>
 ```
 
-... tells the template to render the variable `name` which was passed in the route function `hello`.
+This code tells the template to render the variable `name` that was passed in the route function `hello`.
 
-Visiting `127.0.0.1:5000/hello/` without a name will create an error. Think about how you can prevent this from happening.
+Visiting `127.0.0.1:5000/hello/` without a name creates an error. Try to think of a way to prevent this error.
 
 --- /collapse ---
 
 --- task ---
 
-Create a link to your new dynamic hello page from your index.
+Create a link to your new, dynamic hello page from your index.
 
-Edit `index.html` to add a link to your new hello page under the heading.
+Edit `index.html` to add a link to the hello page under the heading.
 
 ```html
 <h1>My website</h1>
@@ -77,7 +79,7 @@ Edit `index.html` to add a link to your new hello page under the heading.
 
 --- task ---
 
-Save your changes and refresh the index page to see the result.
+Save the changes to `index.html`, and then refresh the index page in the browser to see the updated version.
 
 ![flask app link](images/flask-app-link.png)
 
