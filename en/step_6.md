@@ -2,11 +2,10 @@
 
 Websites like Facebook, YouTube and BBC News have dynamic content: these websites show different content within the same template.
 
-Now you will create a new route on your website so that when you go to `http://127.0.0.1/hello/name`, the page will show you a personal greeting. So for example, `/hello/Dana/` displays 'Hello Dana!'.
-
+Now you will create a new route on your website so that the page will show you a personalised greeting.
 --- task ---
 
-Add a new route to your application:
+Open `app.py` and add a new route to your application:
 
 --- code ---
 ---
@@ -28,7 +27,7 @@ def hello(name):
 
 --- task ---
 
-Create a new HTML template called `page.html`, and add the following HTML code to it:
+Create a new HTML template in the templates folder called `page.html`, and add the following HTML code to it:
 
 --- code ---
 ---
@@ -64,7 +63,7 @@ Open your `index.html` template and add a link to the hello page under the headi
 language: html
 line_numbers: true
 line_number_start: 6
-line_higlights: 7
+line_highlights: 7
 ---
 <h1>My website</h1>
 <a href="/hello/paul">Hi Paul</a>
@@ -85,7 +84,7 @@ Save the changes to `index.html`, and then open `localhost:5000` to see the upda
 title: How does this route work?
 ---
 
-- `@app.route('/hello/<name>')`: the `<name>` part means it passes the name into the `hello` function as a variable called `name`.
+- `@app.route('/hello/<name>')`: the `<name>` part passes the text written in the URL into the `hello` function as a variable called `name`.
 - `def hello(name)`: this is the function that determines what content is shown. Here, the function takes the given name as a parameter.
 - `return render_template('page.html', name=name)`: this code looks up the template `page.html` and passes in the variable `name` from the URL so that the template can use it.
 
@@ -96,8 +95,8 @@ Flask uses `jinja`, a Python library for rendering templates. Look at this code 
 <h1>Hello {{ name }}!</h1>
 ```
 
-This code tells the template to render the variable `name` that was passed in the route function `hello`.
+This code tells the template to use the variable `name` that was passed in the route function `hello`.
 
-Visiting `127.0.0.1:5000/hello/` without a name creates an error. Try to think of a way to prevent this error.
+Visiting `localhost:5000/hello/` without a name creates an error. 
 
 --- /collapse ---
