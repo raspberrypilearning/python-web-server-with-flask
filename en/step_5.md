@@ -1,43 +1,94 @@
-## Challenge: add a HTML template to the second page
+## Use CSS styles
 
-Now you know how to change your 'index' page to use a HTML template, make your 'cakes' page use a HTML template too!
+**Cascading Style Sheets (CSS)** are rules to tell a browser how to display HTML content.
 
---- hints ---
+--- task ---
 
---- hint ---
+Go to the **terminal** and press <kbd>Ctrl</kbd> + <kbd>C</kbd> again to stop the flask server.
 
-Repeat the steps in the previous project section to create and use a HTML template for the 'cakes' page.
+Make sure you are in the `webapp` directory using this command:
 
---- /hint ---
+--- code ---
+---
+language: bash
+line_numbers: false
+---
+cd ~/Documents/webapp/templates/
+--- /code ---
 
---- hint ---
+--- /task ---
 
-Create a `cakes.html` file and save it in `templates`.
+--- task ---
 
-Modify the `cakes()` function in `app.py` to use `render_template`.
+Create a new directory called `static`.
 
---- /hint ---
+--- code ---
+---
+language: bash
+line_numbers: false
+---
+mkdir static
+--- /code ---
 
---- hint ---
+--- /task ---
 
-Your `cakes.html` template should look this:
+--- task ---
+
+Go back to **Thonny** and create a new file. Save this file as `style.css` inside your `static` folder.
+
+--- /task ---
+
+--- task ---
+
+Add the following CSS rules to `style.css` then **save** the file. This is your stylesheet.
+
+--- code ---
+---
+language: css
+line_numbers: true
+---
+body {
+    background: red;
+    color: yellow;
+}
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Now modify your `index.html` HTML template to include the CSS rules by adding a `<head>` tag containing a `<link>` tag with a reference to the style sheet file:
 
 ```html
 <html>
+<head>
+<link rel="stylesheet" href='/static/style.css' />
+</head>
 <body>
-<h1>Yummy cakes!</h1>
+<h1>My website</h1>
 </body>
 </html>
 ```
 
-Modify the `cakes()` function in `app.py`:
+--- /task ---
 
-```python
-@app.route('/cakes')
-def cakes():
-    return render_template('cakes.html')
+--- task ---
+
+Save the change to `index.html` and refresh your browser. You should see a colourful version of your web app!
+
+![Flask app with colour](images/flask-app-with-colour.png)
+
+--- /task ---
+
+If your web app doesn't look right, your CSS file might not be in the right directory.
+
+You now have a number of files and directories for your web app. It is worth making sure your `webapp` project directory contains the following files and has the following structure:
+
 ```
-
---- /hint ---
-
---- /hints ---
+├── app.py
+├── static
+│   └── style.css
+└── templates
+    └── index.html
+    └── cakes.html
+```

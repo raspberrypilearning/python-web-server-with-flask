@@ -24,10 +24,12 @@ steps:
   - engaged
 - title: Add a new page
 - title: Create a HTML template
-- title: 'Challenge: Add a HTML template to your 2nd page'
-  challenge: true
-- title: Add colour with CSS
-- title: Adding dynamic content
+- title: Use CSS styles
   completion:
   - internal
+- title: Add dynamic content
+  completion:
+  - external
+- title: 'Challenge'
+  challenge: true
 - title: What next?

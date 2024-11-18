@@ -8,7 +8,7 @@ Open a terminal and use the `mkdir` command to create a new directory inside you
 language: bash
 line_numbers: false
 ---
-mkdir Documents/webapp
+mkdir ~/Documents/webapp
 --- /code ---
 
 --- /task ---
@@ -22,7 +22,7 @@ Use the 'change directory' command `cd` to open the new directory.
 language: bash
 line_numbers: false
 ---
-cd Documents/webapp
+cd ~/Documents/webapp
 --- /code ---
 --- /task ---
 

@@ -1,63 +1,35 @@
-## Add colour with CSS
+## Add dynamic content
 
-Now you'll add some Cascading Style Sheets (CSS) to add colour to your web page. Cascading Style Sheets are rules for how a browser displays HTML content.
+Now you know how to deliver static HTML web pages using templates. Large websites like Facebook, YouTube and BBC News have dynamic content: these websites show different content depending on the page you visit, even though the templates are very similar.
 
---- task ---
+You will now add some dynamic content to your pages so they can display different information. 
 
-First, return to the terminal/command prompt window and navigate to the `webapp` directory. If you're in the `templates` directory, go up one level with the command `cd ..`.
-
---- /task ---
+Now you will create a new route on your website so that when you go to `http://127.0.0.1/hello/name`, the page says 'Hello name!', replacing 'name' with whatever you put there. So for example, `/hello/Dana/` displays 'Hello Dana!'.
 
 --- task ---
 
-Create a new directory called `static`.
+Add the following code to create a new route in your application:
 
-```bash
-mkdir static
+```python
+@app.route('/hello/<name>')
+def hello(name):
+    return render_template('page.html', name=name)
 ```
 
---- /task ---
-
---- task ---
-
-Create a new file in IDLE by clicking **File** and **New File**, and save this file as `style.css` in the `static` folder.
+- `@app.route('/hello/<name>')`: the `<name>` part means it passes the name into the `hello` function as a variable called `name`.
+- `def hello(name)`: this is the function that determines what content is shown. Here, the function takes the given name as a parameter.
+- `return render_template('page.html', name=name)`: this code looks up the template `page.html` and passes in the variable `name` from the URL so that the template can use it.
 
 --- /task ---
 
 --- task ---
 
-Add the following CSS rules to the file:
-
-```css
-body {
-    background: red;
-    color: yellow;
-}
-```
-
-![idle css](images/idle-css.png)
-
-**Note:** this code contains colour names, but you could also create colours using hex codes like `#ff0000` (red).
-
---- /task ---
-
---- task ---
-
-Save your changes.
-
---- /task ---
-
---- task ---
-
-Now modify your `index.html` HTML template to include the CSS rules by adding a `<head>` tag containing a `<link>` tag with a reference to the style sheet file:
+Create a new HTML template called `page.html`, and add the following HTML code to it:
 
 ```html
 <html>
-<head>
-<link rel="stylesheet" href='/static/style.css' />
-</head>
 <body>
-<h1>My website</h1>
+<h1>Hello {{ name }}!</h1>
 </body>
 </html>
 ```
@@ -66,21 +38,49 @@ Now modify your `index.html` HTML template to include the CSS rules by adding a 
 
 --- task ---
 
-Save the change to `index.html` and refresh your browser. You should see a colourful version of your web app!
+Save the files and visit `http://127.0.0.1:5000/hello/paul`. The page you see should look like this:
 
-![Flask app with colour](images/flask-app-with-colour.png)
+![Hello Paul!](images/flask-hello-paul.png)
+
+Try `http://127.0.0.1/hello/name` with different names!
 
 --- /task ---
 
-If your web app doesn't look right, your CSS file might not be in the right directory.
+--- collapse ---
 
-You now have a number of files and directories for your web app. It is worth making sure your `webapp` project directory contains the following files and has the following structure:
+---
+title: What's happening here?
+---
 
+Flask uses `jinja`, a Python library for rendering templates. Look at this code with the braces (curly brackets):
+
+```html
+<h1>Hello {{ name }}!</h1>
 ```
-├── app.py
-├── static
-│   └── style.css
-└── templates
-    └── index.html
-    └── cakes.html
+
+This code tells the template to render the variable `name` that was passed in the route function `hello`.
+
+Visiting `127.0.0.1:5000/hello/` without a name creates an error. Try to think of a way to prevent this error.
+
+--- /collapse ---
+
+--- task ---
+
+Create a link to your new, dynamic hello page from your index.
+
+Edit `index.html` to add a link to the hello page under the heading.
+
+```html
+<h1>My website</h1>
+<a href="/hello/paul">Hi Paul</a>
 ```
+
+--- /task ---
+
+--- task ---
+
+Save the changes to `index.html`, and then refresh the index page in the browser to see the updated version.
+
+![flask app link](images/flask-app-link.png)
+
+--- /task ---
