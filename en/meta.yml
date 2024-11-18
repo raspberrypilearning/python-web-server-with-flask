@@ -27,7 +27,7 @@ steps:
 - title: Use CSS styles
   completion:
   - internal
-- title: Add dynamic content
+- title: Dynamic content
   completion:
   - external
 - title: 'Challenge'

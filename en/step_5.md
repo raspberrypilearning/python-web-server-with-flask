@@ -72,7 +72,7 @@ line_highlights: 2-4
 ---
 <html>
 <head>
-<link rel="stylesheet" href='/static/style.css'/>
+<link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
 <h1>My website</h1>
