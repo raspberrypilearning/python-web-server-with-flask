@@ -4,7 +4,11 @@
 
 --- task ---
 
-Go to the **terminal** and press <kbd>Ctrl</kbd> + <kbd>C</kbd> again to stop the flask server.
+Open a new terminal window, so that you can leave the Flask web server running in the other one.
+
+--- /task ---
+
+--- task ---
 
 Make sure you are in the `webapp` directory using this command:
 
@@ -13,7 +17,7 @@ Make sure you are in the `webapp` directory using this command:
 language: bash
 line_numbers: false
 ---
-cd ~/Documents/webapp/templates/
+cd ~/Documents/webapp
 --- /code ---
 
 --- /task ---
@@ -48,8 +52,8 @@ language: css
 line_numbers: true
 ---
 body {
-    background: red;
-    color: yellow;
+    background: beige;
+    color: blue;
 }
 --- /code ---
 
@@ -57,32 +61,42 @@ body {
 
 --- task ---
 
-Now modify your `index.html` HTML template to include the CSS rules by adding a `<head>` tag containing a `<link>` tag with a reference to the style sheet file:
+Now modify your `index.html` HTML template to include the CSS stylesheet:
 
-```html
+--- code ---
+---
+language: css
+line_numbers: true
+line_number_start: 1
+line_highlights: 2-4
+---
 <html>
 <head>
-<link rel="stylesheet" href='/static/style.css' />
+<link rel="stylesheet" href='/static/style.css'/>
 </head>
 <body>
 <h1>My website</h1>
 </body>
 </html>
-```
-
+--- /code ---
 --- /task ---
 
 --- task ---
 
-Save the change to `index.html` and refresh your browser. You should see a colourful version of your web app!
+Save the changes to `index.html` then go back to **Chromium** and refresh the browser. You should see a colourful version of your web app!
 
 ![Flask app with colour](images/flask-app-with-colour.png)
 
 --- /task ---
 
+--- collapse ---
+---
+title: I can't see the colours
+---
+
 If your web app doesn't look right, your CSS file might not be in the right directory.
 
-You now have a number of files and directories for your web app. It is worth making sure your `webapp` project directory contains the following files and has the following structure:
+Make sure your `webapp` project directory contains the following files and has the following structure:
 
 ```
 ├── app.py
@@ -92,3 +106,4 @@ You now have a number of files and directories for your web app. It is worth mak
     └── index.html
     └── cakes.html
 ```
+--- /collapse ---
