@@ -6,10 +6,7 @@ Set up a web server and create a simple website using Flask, Python, and HTML/CS
 
 The web server will be able to react to the dynamic content that the user inputs.
 
-
-### You will need
-
-- A Raspberry Pi with the latest Raspberry Pi OS 
+You will need a Raspberry Pi with the latest Raspberry Pi OS 
 
 
 --- collapse ---
@@ -17,7 +14,9 @@ The web server will be able to react to the dynamic content that the user inputs
 title: Installing Flask
 ---
 
-`Flask` should be pre-installed as part of Raspberry Pi OS, but you can also install it with the command
+`Flask` should be pre-installed as part of Raspberry Pi OS, so you shouldn't need to do anything.
+
+You can install it manually with the command:
 
 --- code ---
 ---
