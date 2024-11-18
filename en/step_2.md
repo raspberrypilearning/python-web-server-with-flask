@@ -1,31 +1,6 @@
-## Build a Flask website
-
-First, set up a basic web application with Flask and Python.
-
-If you don't have Python 3 on your computer, you need to download and install it.
+## Create the app
 
 --- task ---
-
-[Download Python 3](https://www.python.org/downloads/) and install it.
-
-[[[generic-python-install-python3]]]
-
---- /task ---
-
-You also need to install the Flask package. 
-
---- task ---
-
-Install the `flask` Python module using `pip`. Make sure you are connected to the internet before you start.
-
-[[[generic-python-installing-with-pip]]]
-
---- /task ---
-
-Once Flask is installed, you can create your web application.
-
---- task ---
-
 Open a terminal or command prompt window, and use the `mkdir` command to create a new directory called `webapp`.
 
 ```bash
@@ -118,3 +93,5 @@ Now open your web browser and enter the URL `http://127.0.0.1:5000/`. You should
 --- /task ---
 
 ![Flask Hello world](images/flask-hello-world.png)
+
+
