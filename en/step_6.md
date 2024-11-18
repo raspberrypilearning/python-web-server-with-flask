@@ -50,9 +50,9 @@ Save both files, then visit `localhost:5000/hello/Paul` in the **Chromium browse
 
 The page you see should look like this:
 
-![Hello Paul!](images/flask-hello-paul.png)
+![A website displaying the text 'Hello Paul!'](images/flask-hello-paul.png)
 
-Try replacing `paul` in the address bar with a different name!
+Try replacing `Paul` in the address bar with a different name!
 
 --- /task ---
 
@@ -76,7 +76,7 @@ line_highlights: 7
 
 Save the changes to `index.html`, and then open `localhost:5000` to see the updated version.
 
-![flask app link](images/flask-app-link.png)
+![A website with blue text on a beige background. The text reads 'My website' in a header font and then a link to 'Hi Paul'](images/flask-app-link.png)
 
 --- /task ---
 
