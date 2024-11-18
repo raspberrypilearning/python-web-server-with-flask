@@ -2,7 +2,7 @@
 
 Set up a web server and create a simple website using Flask, Python, and HTML/CSS.
 
-![flask web app](images/showcase.png)
+![A web browser open on a page with blue text on a beige background. The text says 'My website' and has a link to 'Hi Paul'.](images/flask-app-link.png)
 
 The web server will be able to react to the dynamic content that the user inputs.
 
