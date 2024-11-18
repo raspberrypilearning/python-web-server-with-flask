@@ -9,6 +9,7 @@ Go to your terminal and press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop your flask 
 
 --- task ---
 Create a `templates` directory in your `webapp` directory: 
+
 --- code ---
 ---
 language: bash
@@ -57,6 +58,7 @@ line_numbers: true
 ---
 from flask import Flask, render_template
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -73,6 +75,7 @@ line_highlights: 7
 def index():
     return render_template('index.html')
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -94,7 +97,6 @@ python3 app.py
 Go to `localhost:5000/` page in **Chromium** to see your new HTML template displayed.
 
 ![my website](images/flask-template.png)
-
 
 --- /task ---
 
