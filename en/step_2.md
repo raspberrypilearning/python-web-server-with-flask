@@ -29,14 +29,9 @@ cd Documents/webapp
 --- task ---
 From the **Programming** menu, open **Thonny**.
 --- /task ---
-
---- task ---
-Save the new file with the name `app.py` inside the `webapp` folder you just created.
---- /task ---
-
 --- task ---
 
-Add this Python code into the `app.py` file, then **save** the file.
+Add this Python code into the blank file.
 
 --- code ---
 ---
@@ -55,6 +50,11 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 --- /code ---
 --- /task ---
+
+--- task ---
+Save the new file with the name `app.py` inside the `webapp` folder you just created.
+--- /task ---
+
 
 --- task ---
 Go back to your terminal window and run the script you just wrote:
