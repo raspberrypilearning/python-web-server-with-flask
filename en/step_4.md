@@ -1,84 +1,100 @@
-## Return HTML web pages
+## Create a HTML template
 
-Next, you'll modify your existing routes to return a full HTML web page rather than just simple text.
+You can use a **template** to give your page a style. The template will use **HyperText Markup Language (HTML)**. 
 
-The HTML web page will be created from a **template** that holds the static content of the page. In a later section of this project, you'll learn how to insert data to create a dynamic version of the page.
 
 --- task ---
+Go to your terminal and press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop your flask server.
+--- /task ---
 
-First, create a `templates` directory in your `webapp` directory by entering the following command into the terminal or command prompt window:
-
-```bash
+--- task ---
+Create a `templates` directory in your `webapp` directory: 
+--- code ---
+---
+language: bash
+line_numbers: false
+---
 mkdir templates
-```
+--- /code ---
 
 --- /task ---
 
 --- task ---
 
-Create a new file in IDLE by clicking **File** and **New File**, and save this file as `index.html` in your `templates` folder.
+Go back to **Thonny** and create a new file containing this code:
 
---- /task ---
-
---- task ---
-
-Enter the following HTML code in `index.html`:
-
-```html
+--- code ---
+---
+language: html
+line_numbers: true
+---
 <html>
 <body>
 <h1>My website</h1>
 </body>
 </html>
-```
+--- /code ---
 
-![idle html](images/idle-html.png)
-
---- /task ---
-
---- task ---
-
-Save your changes by clicking **File** and **Save**, or by pressing <kbd>Ctrl</kbd> and <kbd>s</kbd>. 
+![A new file called index.html containing the code above](images/html-file.png)
 
 --- /task ---
 
 --- task ---
 
-Return to your `app.py` file in IDLE, and modify the first line of your code to import the `render_template` function from the `flask` module as well:
+Save this file as `index.html` inside your `templates` folder.
 
-```python
+--- /task ---
+
+--- task ---
+
+Return to your `app.py` file and change the first line of code to add `render_template`:
+
+
+--- code ---
+---
+language: python
+line_numbers: true
+---
 from flask import Flask, render_template
-```
-
+--- /code ---
 --- /task ---
 
 --- task ---
+Change the `index()` route to use your `index.html` HTML template:
 
-Finally, modify your `index()` function to return the `index.html` HTML template instead of the normal text. Change the code inside the definition so that the code looks like this:
-
-```python
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 5
+line_highlights: 7
+---
 @app.route('/')
 def index():
     return render_template('index.html')
-```
+--- /code ---
+--- /task ---
 
-This code makes Flask look for `index.html` in the `templates` directory that the `app.py` program is in.
+--- task ---
+
+Save `app.py` then go back to the terminal and run it to restart your server:
+
+--- code ---
+---
+language: bash
+line_numbers: false
+---
+python3 app.py
+--- /code ---
 
 --- /task ---
 
 --- task ---
 
-Save the file. Make sure your `app.py` program is still running. If it's not, just run it again using the terminal/command prompt.
-
---- /task ---
-
---- task ---
-
-Load the `http://127.0.0.1:5000/` page in your web browser to see your new HTML template displayed.
+Go to `localhost:5000/` page in **Chromium** to see your new HTML template displayed.
 
 ![my website](images/flask-template.png)
 
-In this case what you see is not much different, because the only new thing is a HTML header. There's plenty of scope to add other things!
 
 --- /task ---
 

@@ -23,7 +23,7 @@ steps:
   completion:
   - engaged
 - title: Add a new page
-- title: Using HTML
+- title: Create a HTML template
 - title: 'Challenge: Add a HTML template to your 2nd page'
   challenge: true
 - title: Add colour with CSS
