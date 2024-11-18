@@ -22,7 +22,12 @@ mkdir templates
 
 --- task ---
 
-Go back to **Thonny** and create a new file containing this code:
+Go back to **Thonny** and create a new file. Save this file as `index.html` inside your `templates` folder.
+
+--- /task ---
+
+--- task ---
+Add this code to `index.html` and **save** your changes.
 
 --- code ---
 ---
@@ -42,14 +47,13 @@ line_numbers: true
 
 --- task ---
 
-Save this file as `index.html` inside your `templates` folder.
+
 
 --- /task ---
 
 --- task ---
 
-Return to your `app.py` file and change the first line of code to add `render_template`:
-
+Return to your `app.py` file and change the first line of code:
 
 --- code ---
 ---
@@ -96,7 +100,7 @@ python3 app.py
 
 Go to `localhost:5000/` page in **Chromium** to see your new HTML template displayed.
 
-![my website](images/flask-template.png)
+![A web browser pointed at localhost:5000 with the text 'My website' in a large header font](images/flask-template.png)
 
 --- /task ---
 
