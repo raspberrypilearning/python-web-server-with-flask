@@ -1,36 +1,15 @@
-## Build a Flask website
-
-First, set up a basic web application with Flask and Python.
-
-If you don't have Python 3 on your computer, you need to download and install it.
+## Create the app
 
 --- task ---
+Open a terminal and use the `mkdir` command to create a new directory inside your documents folder called `webapp`.
 
-[Download Python 3](https://www.python.org/downloads/) and install it.
-
-[[[generic-python-install-python3]]]
-
---- /task ---
-
-You also need to install the Flask package. 
-
---- task ---
-
-Install the `flask` Python module using `pip`. Make sure you are connected to the internet before you start.
-
-[[[generic-python-installing-with-pip]]]
-
---- /task ---
-
-Once Flask is installed, you can create your web application.
-
---- task ---
-
-Open a terminal or command prompt window, and use the `mkdir` command to create a new directory called `webapp`.
-
-```bash
-mkdir webapp
-```
+--- code ---
+---
+language: bash
+line_numbers: false
+---
+mkdir ~/Documents/webapp
+--- /code ---
 
 --- /task ---
 
@@ -38,28 +17,27 @@ mkdir webapp
 
 Use the 'change directory' command `cd` to open the new directory.
 
-```bash
-cd webapp
-```
+--- code ---
+---
+language: bash
+line_numbers: false
+---
+cd ~/Documents/webapp
+--- /code ---
 --- /task ---
 
 --- task ---
-
-Open Python 3 IDLE, and create a new file by clicking on**File** and then on **New file**.
-
+From the **Programming** menu, open **Thonny**.
 --- /task ---
-
 --- task ---
 
-Save the new file with the name `app.py` inside the `webapp` folder.
+Add this Python code into the blank file.
 
---- /task ---
-
---- task ---
-
-Now enter the following lines of code into the `app.py` file:
-
-```python
+--- code ---
+---
+language: python
+line_numbers: false
+---
 from flask import Flask
 
 app = Flask(__name__)
@@ -70,51 +48,40 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
-```
-
-![idle](images/idle-flask.png)
-
-You will explore this code in more detail in the next step. But first, make sure the code works.
-
+--- /code ---
 --- /task ---
 
 --- task ---
-
-Save your changes by clicking on **File** and then on **Save**, or by pressing <kbd>Ctrl</kbd> and <kbd>S</kbd> at the same time. 
-
+Save the new file with the name `app.py` inside the `webapp` folder you just created.
 --- /task ---
 
-You need to run your web app from the terminal/command prompt window you opened earlier.
 
 --- task ---
+Go back to your terminal window and run the script you just wrote:
 
-### On Raspberry Pi/Linux/macOS
-
-Enter the command `python3 app.py` into the terminal window.
-
-### On Windows
-
-Enter the command `python app.py` into the command prompt window.
+--- code ---
+---
+language: bash
+line_numbers: false
+---
+python3 app.py
+--- /code ---
 
 --- /task ---
 
-If your code is correct, the window should show you output similar to this:
-
-```
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger pin code: ***-***-***
-```
+If everything is working correctly, the window should show you output similar to this:
 
 ![pi run web app](images/pi-run-web-app.png)
 
 --- task ---
+From your Raspberry Pi's menu, open **Internet** > **Chromium web browser**
+--- /task ---
 
-Now open your web browser and enter the URL `http://127.0.0.1:5000/`. You should see a white screen with the words `Hello world`.
-
-**Note:** `127.0.0.1` means 'home', i.e. your computer. `:5000` means 'port 5000', which is the port the web server is running on.
+--- task ---
+In the address bar, type `localhost:5000` and press <kbd>Enter</kbd>. You should see the welcome page.
 
 --- /task ---
 
 ![Flask Hello world](images/flask-hello-world.png)
+
+
