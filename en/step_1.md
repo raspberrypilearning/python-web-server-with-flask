@@ -7,7 +7,7 @@ The web server will be able to react to the dynamic content that the user inputs
 
 
 ### You will need:
-- You will need a Raspberry Pi with the latest Raspberry Pi OS 
+- A Raspberry Pi with the latest Raspberry Pi OS 
 
 --- collapse ---
 ---
