@@ -18,6 +18,7 @@ language: bash
 line_numbers: false
 ---
 cd ~/Documents/webapp
+
 --- /code ---
 
 --- /task ---
@@ -32,6 +33,7 @@ language: bash
 line_numbers: false
 ---
 mkdir static
+
 --- /code ---
 
 --- /task ---
@@ -55,6 +57,7 @@ body {
     background: beige;
     color: blue;
 }
+
 --- /code ---
 
 --- /task ---
@@ -78,7 +81,9 @@ line_highlights: 2-4
 <h1>My website</h1>
 </body>
 </html>
+
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -106,4 +111,5 @@ Make sure your `webapp` project directory contains the following files and has t
     └── index.html
     └── cakes.html
 ```
+
 --- /collapse ---

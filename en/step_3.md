@@ -41,6 +41,7 @@ def index():
 @app.route('/cakes')
 def cakes():
     return 'Yummy cakes!'
+    
 --- /code ---
 
 --- /task ---

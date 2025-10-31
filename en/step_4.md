@@ -2,12 +2,14 @@
 
 You can use a **template** to give your page a style. The template will use **HyperText Markup Language (HTML)**. 
 
-
 --- task ---
+
 Go to your terminal and press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop your flask server.
+
 --- /task ---
 
 --- task ---
+
 Create a `templates` directory in your `webapp` directory: 
 
 --- code ---
@@ -16,6 +18,7 @@ language: bash
 line_numbers: false
 ---
 mkdir templates
+
 --- /code ---
 
 --- /task ---
@@ -27,6 +30,7 @@ Go back to **Thonny** and create a new file. Save this file as `index.html` insi
 --- /task ---
 
 --- task ---
+
 Add this code to `index.html` and **save** your changes.
 
 --- code ---
@@ -39,6 +43,7 @@ line_numbers: true
 <h1>My website</h1>
 </body>
 </html>
+
 --- /code ---
 
 ![A new file called index.html containing the code above](images/html-file.png)
@@ -46,8 +51,6 @@ line_numbers: true
 --- /task ---
 
 --- task ---
-
-
 
 --- /task ---
 
@@ -61,11 +64,13 @@ language: python
 line_numbers: true
 ---
 from flask import Flask, render_template
+
 --- /code ---
 
 --- /task ---
 
 --- task ---
+
 Change the `index()` route to use your `index.html` HTML template:
 
 --- code ---
@@ -78,6 +83,7 @@ line_highlights: 7
 @app.route('/')
 def index():
     return render_template('index.html')
+
 --- /code ---
 
 --- /task ---
@@ -92,6 +98,7 @@ language: bash
 line_numbers: false
 ---
 python3 app.py
+
 --- /code ---
 
 --- /task ---

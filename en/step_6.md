@@ -22,6 +22,7 @@ def index():
 @app.route('/hello/<name>')
 def hello(name):
     return render_template('page.html', name=name)
+
 --- /code ---
 
 --- /task ---
@@ -40,6 +41,7 @@ line_numbers: true
 <h1>Hello {{ name }}!</h1>
 </body>
 </html>
+
 --- /code ---
 
 --- /task ---
@@ -57,6 +59,7 @@ Try replacing `Paul` in the address bar with a different name!
 --- /task ---
 
 --- task ---
+
 Open your `index.html` template and add a link to the hello page under the heading.
 
 --- code ---
@@ -68,6 +71,7 @@ line_highlights: 7
 ---
 <h1>My website</h1>
 <a href="/hello/paul">Hi Paul</a>
+
 --- /code ---
 
 --- /task ---
