@@ -1,0 +1,20 @@
+name: Create Crowdin project
+
+on:
+  workflow_dispatch:
+
+jobs:
+  crowdin-create:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create crowdin project
+        uses: crowdin/github-action@v2
+        with:
+          command: "project add"
+          command_args: "RPF-Project-${{ github.event.repository.name }} -l fr -l nl -l de -l hi -l it -l ja -l pt-BR -l es-419 -l uk"
+        env:
+          CROWDIN_API_TOKEN: ${{ secrets.CROWDIN_API_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}

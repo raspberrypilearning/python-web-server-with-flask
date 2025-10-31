@@ -1,0 +1,36 @@
+name: Crowdin Hide Strings
+
+on:
+  workflow_run:
+    workflows: ["Crowdin Upload Action"]
+    types:
+      - completed
+
+jobs:
+  crowdin-upload:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Crowdin CLI
+        run: |
+          curl -L https://github.com/crowdin/crowdin-cli/releases/latest/download/crowdin-cli.zip -o crowdin-cli.zip
+          unzip crowdin-cli.zip -d crowdin-cli
+          mkdir -p ~/bin
+          mv crowdin-cli/*/crowdin ~/bin/crowdin
+          cp crowdin-cli/*/crowdin-cli.jar ~/bin/crowdin-cli.jar
+          chmod +x ~/bin/crowdin
+          echo "PATH=$HOME/bin:$PATH" >> $GITHUB_ENV
+
+      - name: Hide matching strings
+        run: |
+          crowdin --version
+          crowdin string list --verbose | grep -E -- '--- /no-print ---|--- no-print|--- print-only|hero_image images/' | awk '{print $1}' | sed 's/^#//' | grep '^[0-9]\+$'
+          while read -r id; do
+            crowdin string edit "$id" --hidden
+          done
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_API_TOKEN: ${{ secrets.CROWDIN_API_TOKEN }}

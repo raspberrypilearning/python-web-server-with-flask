@@ -1,0 +1,58 @@
+name: NTTT processing
+
+on:
+  # currently allowing manual trigger only
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to process translations on'
+        required: false
+        default: 'l10n_crowdin_translations'
+        type: string
+
+permissions: write-all
+
+jobs:
+  nttt-processing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch || 'l10n_crowdin_translations'}}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.0'
+      
+      - name: Install NTTT from GitHub repository
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/raspberrypilearning/nttt.git
+
+      - name: Run NTTT on all language directories except 'en'
+        run: |
+          for lang_dir in */; do
+            if [[ -d "$lang_dir" && "$lang_dir" != "en/" ]]; then
+              lang_code=$(basename "$lang_dir")
+              echo "Processing language: $lang_code"
+              cd "$lang_dir"
+              printf "y\n" | nttt -Y YES || true
+              cd ..
+            fi
+          done
+
+      - name: Add changes to branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action - NTTT Processing"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes after NTTT processing"
+          else
+            git commit -m "Apply NTTT processing to translations"
+            git push origin HEAD:${{ inputs.branch || 'l10n_crowdin_translations'}}
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,26 @@
+name: Crowdin Upload Action
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+    paths: ["en/**/*.*"]
+
+jobs:
+  crowdin-upload:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Crowdin push
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_translations: false
+          download_translations: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_API_TOKEN: ${{ secrets.CROWDIN_API_TOKEN }}
