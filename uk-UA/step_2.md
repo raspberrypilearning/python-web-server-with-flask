@@ -1,10 +1,11 @@
 ## Create the app
 
-\--- task ---
+--- task ---
 
 Open a terminal and use the `mkdir` command to create a new directory inside your documents folder called `webapp`.
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -12,15 +13,16 @@ line_numbers: false
 
 mkdir ~/Documents/webapp
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Use the 'change directory' command `cd` to open the new directory.
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -28,21 +30,22 @@ line_numbers: false
 
 cd ~/Documents/webapp
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 From the **Programming** menu, open **Thonny**.
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Add this Python code into the blank file.
 
-## --- code ---
+##
+--- code ---
 
 language: python
 line_numbers: false
@@ -59,21 +62,22 @@ return 'Hello world'
 if **name** == '**main**':
 app.run(debug=True, host='0.0.0.0')
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Save the new file with the name `app.py` inside the `webapp` folder you just created.
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Go back to your terminal window and run the script you just wrote:
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -81,25 +85,25 @@ line_numbers: false
 
 python3 app.py
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
 If everything is working correctly, the window should show you output similar to this:
 
 ![pi run web app](images/pi-run-web-app.png)
 
-\--- task ---
+--- task ---
 
 From your Raspberry Pi's menu, open **Internet** > **Chromium web browser**
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 In the address bar, type `localhost:5000` and press <kbd>Enter</kbd>. You should see the welcome page.
 
-\--- /task ---
+--- /task ---
 
 ![Flask Hello world](images/flask-hello-world.png)
 

@@ -4,11 +4,12 @@ Websites like Facebook, YouTube and BBC News have dynamic content: these website
 
 Now you will create a new route on your website so that the page will show you a personalised greeting.
 
-\--- task ---
+--- task ---
 
 Open `app.py` and add a new route to your application:
 
-## --- code ---
+##
+--- code ---
 
 language: python
 line_numbers: true
@@ -24,15 +25,16 @@ return render_template('index.html')
 def hello(name):
 return render_template('page.html', name=name)
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Create a new HTML template in the templates folder called `page.html`, and add the following HTML code to it:
 
-## --- code ---
+##
+--- code ---
 
 language: html
 line_numbers: true
@@ -44,11 +46,11 @@ line_numbers: true
 </body>
 </html>
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Save both files, then visit `localhost:5000/hello/Paul` in the **Chromium browser**.
 
@@ -58,13 +60,14 @@ The page you see should look like this:
 
 Try replacing `Paul` in the address bar with a different name!
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Open your `index.html` template and add a link to the hello page under the heading.
 
-## --- code ---
+##
+--- code ---
 
 language: html
 line_numbers: true
@@ -74,21 +77,22 @@ line_highlights: 7
 
 <h1>My website</h1><a href="/hello/paul">Hi Paul</a>
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Save the changes to `index.html`, and then open `localhost:5000` to see the updated version.
 
 ![A website with blue text on a beige background. The text reads 'My website' in a header font and then a link to 'Hi Paul'](images/flask-app-link.png)
 
-\--- /task ---
+--- /task ---
 
-## --- collapse ---
-
-## title: How does this route work?
+--- collapse ---
+---
+title: How does this route work?
+---
 
 - `@app.route('/hello/<name>')`: the `<name>` part passes the text written in the URL into the `hello` function as a variable called `name`.
 - `def hello(name)`: this is the function that determines what content is shown. Here, the function takes the given name as a parameter.
@@ -104,4 +108,4 @@ This code tells the template to use the variable `name` that was passed in the r
 
 Visiting `localhost:5000/hello/` without a name creates an error.
 
-\--- /collapse ---
+--- /collapse ---

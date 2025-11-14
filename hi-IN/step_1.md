@@ -9,15 +9,17 @@ The web server will be able to react to the dynamic content that the user inputs
 
 - A Raspberry Pi with the latest Raspberry Pi OS
 
-## --- collapse ---
-
-## title: Installing Flask
+--- collapse ---
+---
+title: Installing Flask
+---
 
 `Flask` should be pre-installed as part of Raspberry Pi OS, so you shouldn't need to do anything.
 
 You can install it manually with the command:
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -25,6 +27,6 @@ line_numbers: false
 
 sudo apt install python3-flask
 
-\--- /code ---
+--- /code ---
 
-\--- /collapse ---
+--- /collapse ---

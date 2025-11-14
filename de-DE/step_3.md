@@ -2,9 +2,10 @@
 
 To add a new page to your web app, you create a new **route**.
 
-## --- collapse ---
-
-## title: What is a route?
+--- collapse ---
+---
+title: What is a route?
+---
 
 In the code you already have, there is a single route:
 
@@ -20,13 +21,14 @@ This route is made up of three parts:
 - `def index()`: the name of the route - `index`
 - `return 'Hello world'`: the contents the user will see - `Hello world`
 
-\--- /collapse ---
+--- /collapse ---
 
-\--- task ---
+--- task ---
 
 Add the code for a new route to `app.py` and **save** the file.
 
-## --- code ---
+##
+--- code ---
 
 language: python
 line_numbers: true
@@ -42,11 +44,11 @@ return 'Hello world'
 def cakes():
 return 'Yummy cakes!'
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 In the **Chromium web browser**, type `localhost:5000/cakes` in the address bar.
 
@@ -54,4 +56,4 @@ You should see a web page with the text "Yummy cakes!" on it.
 
 ![Yummy Cakes](images/flask-cakes.png)
 
-\--- /task ---
+--- /task ---

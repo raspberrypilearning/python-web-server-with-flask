@@ -17,17 +17,17 @@ software: python, html-css-javascript
 version: 4.1
 last_tested: 2018-08-02
 steps:
-- title: What you will make
-- title: Create the app
-  completion:
-  - engaged
-- title: Add a new page
-- title: Create a HTML template
-- title: Use CSS styles
-  completion:
-  - internal
-- title: Dynamic content
-  completion:
-  - external
-- title: 'Challenge'
-  challenge: true
+  - title: What you will make
+  - title: Create the app
+    completion:
+      - engaged
+  - title: Add a new page
+  - title: Create a HTML template
+  - title: Use CSS styles
+    completion:
+      - internal
+  - title: Dynamic content
+    completion:
+      - external
+  - title: 'Challenge'
+    challenge: true
