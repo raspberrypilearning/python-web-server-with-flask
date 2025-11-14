@@ -1,0 +1,33 @@
+---
+title: Build a Python Web Server with Flask
+hero_image: images/banner.png
+description: Install the Python web framework Flask and set up a basic web server with different pages
+original_url: https://raspberrypi.org/learning/python-web-server-with-flask
+theme: yellow
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: python, html-css-javascript
+site_areas: projects
+hardware: ''
+software: python, html-css-javascript
+version: 4.1
+last_tested: 2018-08-02
+steps:
+  - title: What you will make
+  - title: Create the app
+    completion:
+      - engaged
+  - title: Add a new page
+  - title: Create a HTML template
+  - title: Use CSS styles
+    completion:
+      - internal
+  - title: Dynamic content
+    completion:
+      - external
+  - title: 'Challenge'
+    challenge: true

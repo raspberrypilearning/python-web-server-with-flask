@@ -14,9 +14,14 @@ permissions: write-all
 
 jobs:
   crowdin:
-    if: ${{ secrets.CROWDIN_PROJECT_ID != '' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Skip if Crowdin ID missing
+        run: |
+          if [ -z "${{ secrets.CROWDIN_PROJECT_ID }}" ]; then
+            echo "Skipping Crowdin sync — no project ID set."
+            exit 0
+          fi
       - name: Checkout
         uses: actions/checkout@v4
         with:
