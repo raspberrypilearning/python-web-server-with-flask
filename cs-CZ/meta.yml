@@ -1,0 +1,33 @@
+---
+title: Vytvoř webový server v Pythonu pomocí Flasku
+hero_image: images/banner.png
+description: Nainstaluj si webový framework Flask v Pythonu a nastav základní webový server s různými stránkami
+original_url: https://raspberrypi.org/learning/python-web-server-with-flask
+theme: yellow
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: python, html-css-javascript
+site_areas: projects
+hardware: ''
+software: python, html-css-javascript
+version: 4.1
+last_tested: 2018-08-02
+steps:
+- title: Co budeš dělat
+- title: Vytvoř aplikaci
+  completion:
+  - engaged
+- title: Přidej novou stránku
+- title: Vytvoř HTML šablonu
+- title: Použij CSS styl
+  completion:
+  - internal
+- title: Dynamický obsah
+  completion:
+  - external
+- title: 'Výzva'
+  challenge: true
