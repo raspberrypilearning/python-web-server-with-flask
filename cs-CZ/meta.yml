@@ -20,14 +20,14 @@ steps:
 - title: Co budeš dělat
 - title: Vytvoř aplikaci
   completion:
-    - engaged
+  - engaged
 - title: Přidej novou stránku
 - title: Vytvoř HTML šablonu
 - title: Použij CSS styl
   completion:
-    - internal
+  - internal
 - title: Dynamický obsah
   completion:
-    - external
+  - external
 - title: 'Výzva'
   challenge: true
