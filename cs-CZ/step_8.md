@@ -17,12 +17,9 @@ Vyzkoušej si náš projekt [Úvod do webu](https://projects.raspberrypi.org/cs-
 Nebo proč nezkusit jiný projekt [HTML a CSS](https://projects.raspberrypi.org/cs-CZ/projects?software%5B%5D=html-css-javascript).
 
 ***
+
 Tento projekt byl přeložen dobrovolníky:
 
-[name]
-
-[name]
-
-[name]
+Miroslav Kuba
 
 Díky dobrovolníkům můžeme dát lidem po celém světě šanci se učit ve svém vlastním jazyce. Můžete nám pomoci oslovit více lidí dobrovolným překládáním - více informací na [rpf.io/translate](https://rpf.io/translate).

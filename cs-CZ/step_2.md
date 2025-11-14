@@ -4,13 +4,11 @@
 
 Otevři terminál a pomocí příkazu `mkdir` vytvoř ve složce dokumentů nový adresář s názvem `webapp`.
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
-
+---
 mkdir ~/Documents/webapp
 
 --- /code ---
@@ -21,13 +19,11 @@ mkdir ~/Documents/webapp
 
 Pro otevření nového adresáře použij příkaz `cd` pro změnu adresáře.
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
-
+---
 cd ~/Documents/webapp
 
 --- /code ---
@@ -44,23 +40,21 @@ V nabídce **Programování** otevři **Thony**.
 
 Přidej tento kód Pythonu do prázdného souboru.
 
-##
 --- code ---
-
+---
 language: python
 line_numbers: false
---------------------------------------------------------
-
+---
 from flask import Flask
 
-app = Flask(**name**)
+app = Flask(__name__)
 
 @app.route('/')
 def index():
-return 'Ahoj světe'
+    return 'Hello world'
 
-if **name** == '**main**':
-app.run(debug=True, host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
 
 --- /code ---
 
@@ -76,13 +70,11 @@ Ulož nový soubor s názvem `app.py` do složky `webapp`, kterou jsi právě vy
 
 Vrať se do terminálového okna a spusť skript, který jsi právě napsal:
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
-
+---
 python3 app.py
 
 --- /code ---

@@ -18,13 +18,11 @@ title: Instalace Flasku
 
 Můžeš jej nainstalovat ručně pomocí příkazu:
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
-
+---
 sudo apt install python3-flask
 
 --- /code ---

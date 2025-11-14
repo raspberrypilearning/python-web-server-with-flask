@@ -12,12 +12,11 @@ Otevři nové okno terminálu, abys mohl nechat webový server Flask spuštěný
 
 Ujisti se, že jsi v adresáři `webapp`, a to pomocí tohoto příkazu:
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
+---
 
 cd ~/Documents/webapp
 
@@ -29,13 +28,11 @@ cd ~/Documents/webapp
 
 Vytvoř nový adresář s názvem `static`.
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
-
+---
 mkdir static
 
 --- /code ---
@@ -52,16 +49,14 @@ Vrať se do **Thony** a vytvoř nový soubor. Ulož tento soubor jako `style.css
 
 Přidej následující CSS pravidla do souboru `style.css` a poté soubor **ulož**. Toto je tvůj stylový list.
 
-##
 --- code ---
-
+---
 language: css
 line_numbers: true
--------------------------------------------------------
-
+---
 body {
-background: beige;
-color: blue;
+    background: beige;
+    color: blue;
 }
 
 --- /code ---
@@ -72,15 +67,13 @@ color: blue;
 
 Nyní uprav HTML šablonu `index.html` tak, aby obsahovala CSS styly:
 
-##
 --- code ---
-
+---
 language: css
 line_numbers: true
 line_number_start: 1
 line_highlights: 2-4
----------------------------------------------------------
-
+---
 <html>
 <head>
 <link rel="stylesheet" href="/static/style.css" />

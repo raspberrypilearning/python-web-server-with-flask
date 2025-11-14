@@ -12,13 +12,11 @@ Přejdi do terminálu a stiskni <kbd>Ctrl</kbd> + <kbd>C</kbd> pro zastavení Fl
 
 Vytvoř adresář `templates` ve tvém adresáři `webapp`:
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
-
+---
 mkdir templates
 
 --- /code ---
@@ -35,12 +33,11 @@ Vrať se do **Thony** a vytvoř nový soubor. Ulož tento soubor jako `index.htm
 
 Přidej tento kód do souboru `index.html` a **ulož** změny.
 
-##
 --- code ---
-
+---
 language: html
 line_numbers: true
--------------------------------------------------------
+---
 
 <html>
 <body>
@@ -62,12 +59,11 @@ line_numbers: true
 
 Vrať se do souboru `app.py` a změň první řádek kódu:
 
-##
 --- code ---
-
+---
 language: python
 line_numbers: true
--------------------------------------------------------
+---
 
 from flask import Flask, render_template
 
@@ -79,18 +75,17 @@ from flask import Flask, render_template
 
 Změň trasu `index()` tak, aby používala tvou HTML šablonu `index.html`:
 
-##
 --- code ---
-
+---
 language: python
 line_numbers: true
 line_number_start: 5
 line_highlights: 7
--------------------------------------------------------
+---
 
 @app.route('/')
 def index():
-return render_template('index.html')
+    return render_template('index.html')
 
 --- /code ---
 
@@ -100,12 +95,11 @@ return render_template('index.html')
 
 Ulož soubor `app.py` a poté se vrať do terminálu a spusť jej pro restartování serveru:
 
-##
 --- code ---
-
+---
 language: bash
 line_numbers: false
---------------------------------------------------------
+---
 
 python3 app.py
 

@@ -27,22 +27,21 @@ Tato trasa se skládá ze tří částí:
 
 Přidej kód pro novou trasu do souboru `app.py` a soubor **ulož**.
 
-##
 --- code ---
-
+---
 language: python
 line_numbers: true
 line_number_start: 5
 line_highlights: 9-11
-----------------------------------------------------------
+---
 
 @app.route('/')
 def index():
-return 'Ahoj světe'
+    return 'Ahoj světe'
 
 @app.route('/dorty')
 def dorty():
-return 'Vynikající dorty!'
+    return 'Vynikající dorty!'
 
 --- /code ---
 
