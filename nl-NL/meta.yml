@@ -1,0 +1,33 @@
+---
+title: Bouw een Python-webserver met Flask
+hero_image: images/banner.png
+description: Installeer het Python webframework Flask en stel een eenvoudige webserver in met verschillende pagina's
+original_url: https://raspberrypi.org/learning/python-web-server-with-flask
+theme: yellow
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: python, html-css-javascript
+site_areas: projects
+hardware: ''
+software: python, html-css-javascript
+version: 4.1
+last_tested: 2018-08-02
+steps:
+- title: Wat je gaat maken
+- title: Maak de app
+  completion:
+  - engaged
+- title: Een nieuwe pagina toevoegen
+- title: Een HTML-sjabloon maken
+- title: Gebruik CSS-stijlen
+  completion:
+  - internal
+- title: Dynamische inhoud
+  completion:
+  - external
+- title: 'Uitdaging'
+  challenge: true
