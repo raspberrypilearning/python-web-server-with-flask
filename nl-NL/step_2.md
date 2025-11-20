@@ -1,10 +1,11 @@
 ## Maak de app
 
-\--- task ---
+--- task ---
 
 Open een terminal en gebruik de opdracht `mkdir` om een nieuwe map met de naam `webapp` te maken in uw documentenmap.
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -12,15 +13,16 @@ line_numbers: false
 
 mkdir ~/Documents/webapp
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Gebruik de opdracht `cd` om de nieuwe map te openen.
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -28,21 +30,22 @@ line_numbers: false
 
 cd ~/Documents/webapp
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Open **Thonny** in het menu **Programmeren**.
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Voeg deze Python-code toe aan het lege bestand.
 
-## --- code ---
+##
+--- code ---
 
 language: python
 line_numbers: false
@@ -59,21 +62,22 @@ return 'Hallo wereld'
 if **name** == '**main**':
 app.run(debug=True, host='0.0.0.0')
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Sla het nieuwe bestand op onder de naam `app.py` in de map `webapp` die u zojuist hebt gemaakt.
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Ga terug naar uw terminalvenster en voer het script uit dat u zojuist hebt geschreven:
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -81,25 +85,25 @@ line_numbers: false
 
 python3 app.py
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
 Als alles goed werkt, ziet u in het venster uitvoer die er ongeveer zo uitziet:
 
 ![pi voert web-app uit](images/pi-run-web-app.png)
 
-\--- task ---
+--- task ---
 
 Open in het menu van je Raspberry Pi **Internet** > **Chromium webbrowser**
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Typ `localhost:5000` in de adresbalk en druk op <kbd>en voer</kbd>in. U zou de welkomstpagina moeten zien.
 
-\--- /task ---
+--- /task ---
 
 ![Flask Hallo wereld](images/flask-hello-world.png)
 

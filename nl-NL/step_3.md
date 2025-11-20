@@ -2,9 +2,10 @@
 
 Om een nieuwe pagina aan uw web-app toe te voegen, maakt u een nieuwe **route**.
 
-## --- collapse ---
-
-## title: Wat is een route?
+--- collapse ---
+---
+title: Wat is een route?
+---
 
 In de code die u al hebt, is er één route:
 
@@ -20,13 +21,14 @@ Deze route bestaat uit drie delen:
 - `def index()`: de naam van de route - `index`
 - `return 'Hallo wereld'`: de inhoud die de gebruiker zal zien - `Hallo wereld`
 
-\--- /collapse ---
+--- /collapse ---
 
-\--- task ---
+--- task ---
 
 Voeg de code voor een nieuwe route toe aan `app.py` en **sla** het bestand op.
 
-## --- code ---
+##
+--- code ---
 
 language: python
 line_numbers: true
@@ -42,11 +44,11 @@ return 'Hallo wereld'
 def cakes():
 return 'Lekkere taarten!'
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Typ in de **Chromium webbrowser** `localhost:5000/cakes` in de adresbalk.
 
@@ -54,4 +56,4 @@ U zou een webpagina moeten zien met de tekst "Lekkere taarten!" erop.
 
 ![Lekkere taarten](images/flask-cakes.png)
 
-\--- /task ---
+--- /task ---

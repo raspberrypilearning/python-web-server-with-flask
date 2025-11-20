@@ -17,17 +17,17 @@ software: python, html-css-javascript
 version: 4.1
 last_tested: 2018-08-02
 steps:
-- title: Wat je gaat maken
-- title: Maak de app
-  completion:
-  - engaged
-- title: Een nieuwe pagina toevoegen
-- title: Een HTML-sjabloon maken
-- title: EDITED STRING
-  completion:
-  - internal
-- title: Dynamische inhoud
-  completion:
-  - external
-- title: 'Uitdaging'
-  challenge: true
+  - title: Wat je gaat maken
+  - title: Maak de app
+    completion:
+      - engaged
+  - title: Een nieuwe pagina toevoegen
+  - title: Een HTML-sjabloon maken
+  - title: EDITED STRING
+    completion:
+      - internal
+  - title: Dynamische inhoud
+    completion:
+      - external
+  - title: 'Uitdaging'
+    challenge: true

@@ -9,15 +9,17 @@ De webserver kan reageren op de dynamische inhoud die de gebruiker invoert.
 
 - Een Raspberry Pi met het nieuwste Raspberry Pi OS
 
-## --- collapse ---
-
-## title: Flask installeren
+--- collapse ---
+---
+title: Flask installeren
+---
 
 `Flask` zou vooraf geïnstalleerd moeten zijn als onderdeel van Raspberry Pi OS, dus u hoeft niets te doen.
 
 U kunt het handmatig installeren met de opdracht:
 
-## --- code ---
+##
+--- code ---
 
 language: bash
 line_numbers: false
@@ -25,6 +27,6 @@ line_numbers: false
 
 sudo apt install python3-flask
 
-\--- /code ---
+--- /code ---
 
-\--- /collapse ---
+--- /collapse ---
