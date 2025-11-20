@@ -5,6 +5,12 @@ on:
     # Run every day at 1 AM UTC
     - cron: "0 1 * * *"
   workflow_dispatch: # Manual triggering
+    inputs:
+      language_code:
+        description: 'Language code to download translations for (leave empty to download all languages)'
+        required: false
+        default: ''
+        type: string
 
 concurrency:
   group: crowdin-download
@@ -22,23 +28,46 @@ jobs:
             echo "Skipping Crowdin sync — no project ID set."
             exit 0
           fi
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: master
 
-      - name: Synchronize with Crowdin
+      - name: Download all translations from Crowdin
         uses: crowdin/github-action@v2
         with:
-          upload_sources: false
-          upload_translations: false
+          create_pull_request: true
+          crowdin_branch_name: master
           download_translations: true
           localization_branch_name: l10n_crowdin_translations
-          create_pull_request: true
-          pull_request_title: "New Crowdin translations"
-          pull_request_body: "New Crowdin pull request with translations"
           pull_request_base_branch_name: "master"
+          pull_request_body: "New Crowdin pull request with translations"
+          pull_request_title: "New Crowdin translations"
+          upload_sources: false
+          upload_translations: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_API_TOKEN: ${{ secrets.CROWDIN_API_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ inputs.language_code == '' }}
+
+      - name: Download selected translations from Crowdin
+        uses: crowdin/github-action@v2
+        with:
+          create_pull_request: true
+          crowdin_branch_name: master
+          download_language: ${{ inputs.language_code }}
+          download_translations: true
+          localization_branch_name: l10n_crowdin_translations-${{ inputs.language_code }}
+          pull_request_base_branch_name: "master"
+          pull_request_body: "New Crowdin pull request with translations"
+          pull_request_title: "New Crowdin translations for ${{ inputs.language_code }}"
+          upload_sources: false
+          upload_translations: false
+        env:
+          CROWDIN_API_TOKEN: ${{ secrets.CROWDIN_API_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ inputs.language_code != '' }}
+
