@@ -17,17 +17,17 @@ software: python, html-css-javascript
 version: 4.1
 last_tested: 2018-08-02
 steps:
-- title: Co budeš dělat
-- title: Vytvoř aplikaci
-  completion:
-    - engaged
-- title: Přidej novou stránku
-- title: Vytvoř HTML šablonu
-- title: Použij CSS styl
-  completion:
-    - internal
-- title: Dynamický obsah
-  completion:
-    - external
-- title: 'Výzva'
-  challenge: true
+  - title: Co budeš dělat
+  - title: Vytvoř aplikaci
+    completion:
+      - engaged
+  - title: Přidej novou stránku
+  - title: Vytvoř HTML šablonu
+  - title: Použij CSS styl
+    completion:
+      - internal
+  - title: Dynamický obsah
+    completion:
+      - external
+  - title: 'Výzva'
+    challenge: true

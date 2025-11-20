@@ -4,11 +4,12 @@ Websites als Facebook, YouTube en BBC News hebben dynamische inhoud: deze websit
 
 Nu gaat u een nieuwe route op uw website aanmaken, zodat de pagina een persoonlijke begroeting toont.
 
-\--- task ---
+--- task ---
 
 Open `app.py` en voeg een nieuwe route toe aan uw applicatie:
 
-## --- code ---
+##
+--- code ---
 
 language: python
 line_numbers: true
@@ -24,15 +25,16 @@ return render_template('index.html')
 def hello(name):
 return render_template('page.html', name=name)
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Maak een nieuwe HTML-sjabloon in de sjablonenmap met de naam `page.html` en voeg de volgende HTML-code eraan toe:
 
-## --- code ---
+##
+--- code ---
 
 language: html
 line_numbers: true
@@ -44,11 +46,11 @@ line_numbers: true
 </body>
 </html>
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Sla beide bestanden op en ga vervolgens naar `localhost:5000/hello/Paul` in de **Chromium-browser**.
 
@@ -58,13 +60,14 @@ De pagina die u ziet, zou er als volgt uit moeten zien:
 
 Probeer `Paul` in de adresbalk te vervangen door een andere naam!
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Open uw `index.html`-sjabloon en voeg een link naar de hallo-pagina toe onder de kop.
 
-## --- code ---
+##
+--- code ---
 
 language: html
 line_numbers: true
@@ -74,21 +77,22 @@ line_highlights: 7
 
 <h1>Mijn website</h1><a href="/hello/paul">Hallo Paul</a>
 
-\--- /code ---
+--- /code ---
 
-\--- /task ---
+--- /task ---
 
-\--- task ---
+--- task ---
 
 Sla de wijzigingen op in `index.html` en open vervolgens `localhost:5000` om de bijgewerkte versie te bekijken.
 
 ![Een website met blauwe tekst op een beige achtergrond. De tekst luidt 'Mijn website' in een koptekstlettertype en vervolgens een link naar 'Hoi Paul'](images/flask-app-link.png)
 
-\--- /task ---
+--- /task ---
 
-## --- collapse ---
-
-## titel: Hoe werkt deze route?
+--- collapse ---
+---
+title: Hoe werkt deze route?
+---
 
 - `@app.route('/hello/<name>')`: het `<name>` gedeelte geeft de tekst die in de URL staat door aan de `hello` functie als een variabele met de naam `name`.
 - `def hello(name)`: dit is de functie die bepaalt welke inhoud wordt getoond. Hierbij neemt de functie de opgegeven naam als parameter.
@@ -104,4 +108,4 @@ Deze code vertelt de sjabloon om de variabele `name` te gebruiken die is doorgeg
 
 Als u `localhost:5000/hello/` bezoekt zonder een naam, ontstaat er een fout.
 
-\--- /collapse ---
+--- /collapse ---
