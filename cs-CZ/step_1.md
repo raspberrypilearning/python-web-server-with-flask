@@ -9,22 +9,22 @@ Webový server bude schopen reagovat na dynamický obsah, který uživatel zadá
 
 - Raspberry Pi s nejnovějším operačním systémem Raspberry Pi OS
 
---- collapse ---
----
-title: Instalace Flasku
----
+## --- collapse ---
+
+## title: Instalace Flasku
 
 `Flask` by měl být předinstalován jako součást operačního systému Raspberry Pi, takže bys s ním neměl dělat nic dalšího.
 
 Můžeš jej nainstalovat ručně pomocí příkazu:
 
---- code ---
----
+## --- code ---
+
 language: bash
 line_numbers: false
----
+--------------------------------------------------------
+
 sudo apt install python3-flask
 
---- /code ---
+\--- /code ---
 
---- /collapse ---
+\--- /collapse ---
