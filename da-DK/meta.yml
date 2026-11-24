@@ -1,0 +1,28 @@
+---
+title: Byg en Python Web Server med Flask
+hero_image: images/banner.png
+description: I denne guide installerer vi det simpel web framework Flask, og sætter en enkel web server op med forskellige sider, ved at bruge Python, HTML og CSS.
+original_url: https://raspberrypi.org/learning/python-web-server-with-flask
+theme: yellow
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: python, html-css-javascript
+site_areas: projects
+hardware: ''
+software: python, html-css-javascript
+version: 4.1
+last_tested: 2018-08-02
+steps:
+- title: Introduktion
+- title: Byg en Flask hjemmeside
+- title: Tilføj en ny side
+- title: Returner HTML web sider
+- title: "Udfordring: Tilføj en HTML template til den anden side"
+  challenge: true
+- title: Tilføj farver med CSS
+- title: Tilføj dynamisk indhold
+- title: Hvad skal det næste være?
